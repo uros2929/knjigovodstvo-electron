@@ -1,0 +1,14 @@
+{
+  "name": "ospbyumni",
+  "version": "1.0.0",
+  "description": "App za knjigovodstvo",
+  "main": "electronMain.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Uros Marinkovic",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.3"
+  }
+}

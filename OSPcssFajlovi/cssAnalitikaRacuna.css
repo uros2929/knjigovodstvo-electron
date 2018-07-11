@@ -1,0 +1,44 @@
+#modalAnalitikaRacuna {
+    position: relative;
+    float: right;
+    right: 5%;
+    text-align: center;
+    align-content: center;
+    display: none;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+#naslovAnalitikaRacuna{
+    width: 60%;
+    min-height: 50px;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 5%;
+    border-bottom: solid 3px rgb(255, 85, 0);
+    border-right: solid 3px rgb(255, 85, 0);
+    border-top: solid 3px rgb(255, 85, 0);
+}
+#mainAnalitikaRacuna{
+    display: flex;
+    flex-direction: column;
+    min-height: 597px;
+    width: 60%;
+    position: relative;
+    left: 5%;
+    border-right: solid 3px rgb(255, 85, 0);
+}
+#dugmeIzadjiIzAnalitikaRacuna{
+    position: relative;
+    float: right;
+    width: 6px;
+    height: 15px;
+    font-size: 10px;
+    font-weight: 700;
+}
+#dugmeIzadjiIzAnalitikaRacuna:hover{
+    border-color: rgb(255, 85, 0);
+}

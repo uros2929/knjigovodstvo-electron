@@ -1,0 +1,128 @@
+#modalKalendar {                            
+    position: relative;
+    float: right;
+    top: 0;
+    right: 5%;
+    text-align: center;
+    align-content: center;
+    display: none;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+ 
+}
+#naslovKalendar{
+    width: 100%;
+    color: white;
+    font-size: 21px;
+    height: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    left: 5%;
+}
+#naslovKalendar>div{
+  margin: 1% 2% 1% 1%;        
+    border-bottom: solid red 2px;
+    cursor: pointer;
+    border-bottom-style: dashed;
+}
+#naslovKalendar>div:hover{
+    border-bottom-color: white;
+    color: red;
+}
+#dugmeIzadjiIzKalendara{ 
+    position: relative;
+    float: right;
+    width: 12px;
+    height: 15px;
+    font-size: 11px;
+    font-weight: 700;    
+    }
+    #dugmeIzadjiIzKalendara:hover{
+        border-color: rgb(255, 85, 0);
+    }
+#mainKalendar{
+    height: 84%;
+    width: 75%;
+    position: relative;
+    left: 20%;
+    background-color: rgb(143, 144, 144);
+}
+#kalendar {
+    margin: auto;
+    width: 100%;
+    background-color: rgb(30, 34, 34);
+}
+.mesec {
+    width: 25%;
+    border-left: solid gainsboro 1px;
+    padding: 3%;
+
+}
+.mesecUnutrasnji {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    height: 90%;
+}
+.dan {
+    width: 14%;
+    height: 15%;
+    color: white;
+    font-style: italic;
+}
+#brojDana{
+    width: 14%;
+     height: 15%;
+     color: white;
+     font-style: italic;
+}
+#mesec1,#mesec2,#mesec3,#mesec4,#mesec5,#mesec5,#mesec6,#mesec7,#mesec8,#mesec9,#mesec10,#mesec11,#mesec12{
+    border: solid;
+    position: absolute;
+    top: 5%;
+    width: 90%;
+    height: 300px;
+    margin-top: 2%;
+    display: none;
+    background-color: rgb(58, 58, 58);
+    border-color: red;
+}
+#textAreaKalendara{
+    width: 100%;
+    position: absolute;
+    top: 71%;
+    margin: 0 2% 0 2%;
+}
+#textAreaKalendara textarea{
+    width: 94%;
+    margin-left: 1%;
+    margin-right: 2%;
+    border-top: solid 2px red;
+    border-left: solid 2px red;
+    border-right: solid 2px red;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    height: 182px;
+
+}
+#textAreaKalendara button{
+    position: absolute;
+    display: block;
+    top: 101%;
+    width: 25%;
+    height: 35px; 
+    font-size: 24px; 
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+    color: white; 
+}
+#textAreaKalendara button:hover{
+    background-color: rgb(30, 34, 34);
+    border-color: rgb(255, 85, 0);
+}

@@ -1,0 +1,18 @@
+#sat{
+font-size: 30px;
+color: white;   
+position: relative;
+float: left;
+margin-left: 18%;
+margin-top: 1%;
+font-style: italic;
+}
+#datumDiv{
+    font-size: 30px;
+    color: white;   
+    position: relative;
+    float: left;
+    margin-left: -10%;
+    margin-top: 4%;
+    font-style: italic;  
+}

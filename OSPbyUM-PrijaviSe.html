@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="&copy; Copyright by UM">
+    <link rel="stylesheet" href="OSPcssFajlovi/OSPbyUMPrijaviSeRegistrujSe.css">
+    <title>OSPbyUM</title>
+</head>
+
+<body>
+    <button id="ugasiCitat">Ugasi citate</button>
+    <a href="OSPbyUM-PrijaviSe.html" class="naslovA">
+        <h1>
+            <span class="naslov">OSP</span>byUM</h1>
+    </a>
+    <div id="formaLogInSve">
+        <form action="?" method="POST" id="formaLogIn">
+            <label for="emailLog" id="lable">email</label>
+            <br>
+            <input type="email" name="emailLog" id="emailLog" placeholder="email" required>
+            <br>
+            <label for="passLog" id="lable">password</label>
+            <br>
+            <input type="password" name="passLog" id="passLog" placeholder="password" required>
+            <br>
+            <br>
+            <input type="submit" value="Prijavi se" id="dugmePrijaviSe">
+            <br>
+            <br>
+            <input type="button" value="Registruj se" id="dugmeRegistujSe">
+        </form>
+        <a href="#" id="dugmeZaboravljenaSifra">Zaboravio sam šifru</a>
+    </div>
+    <div id="citatiRandom"></div>
+
+    <div id="formaZaboravljenaSifra">
+        <form action="?" method="post" id="ZaboravljenaSifra">
+            <label for="odgovor" id="ukucajEmail">Email</label>
+            <br>
+            <br>
+            <input type="text" name="odgovorEmail" id="odgovorEmail" placeholder="Email">
+            <br>
+            <br>
+            <label for="odgovor" id="UkucajSifruIzFirme">Šifra iz firme</label>
+            <br>
+            <br>
+            <input type="text" name="odgovor" id="odgovor" placeholder="Šifra iz firme">
+            <br>
+            <br>
+            <input type="submit" value="Potvrdi" id="dugmePotvrdiProveru">
+            <div id="prikazZaboravljeneSifre">
+                <h1 id="pokaziSifru"></h1>
+            </div>
+        </form>
+    </div>
+
+    <div id="formaRegistrujSeSve">
+        <form action="?" method="POST" id="formaRegistrujSe">
+            <label for="imeRegistracija">
+                <strong>Ime</strong>
+            </label>
+            <br>
+            <input type="text" name="imeRegistracija" id="imeRegistracija" placeholder="Ime" required>
+            <br>
+            <br>
+            <label for="prezimeRegistracija">
+                <strong>Prezime</strong>
+            </label>
+            <br>
+            <input type="text" name="prezimeRegistracija" id="prezimeRegistracija" placeholder="Prezime" required>
+            <br>
+            <br>
+            <label for="firmaRegistracija">
+                <strong>Firma</strong>
+            </label>
+            <br>
+            <input type="text" name="firmaRegistracija" id="firmaRegistracija" placeholder="Firma" required>
+            <br>
+            <br>
+            <label for="emailRegistracija">
+                <strong>Email</strong>
+            </label>
+            <br>
+            <input type="email" name="emailRegistracija" id="emailRegistracija" placeholder="email" required>
+            <br>
+            <br>
+            <label for="passwordRegistracija">
+                <strong>Password</strong>
+            </label>
+            <br>
+            <input type="password" name="passwordRegistracija" id="passwordRegistracija" placeholder="password" required>
+            <br>
+            <br>
+            <label for="potvrdiPasswordRegistracija">
+                <strong>Potvrdi password</strong>
+            </label>
+            <br>
+            <input type="password" name="potvrdiPasswordRegistracija" id="potvrdiPasswordRegistracija" placeholder="potvrdi password"
+                required>
+            <br>
+            <br>
+            <label for="sifraFirmeRegistarcija">
+                <strong>Šifra iz firme</strong>
+            </label>
+            <br>
+            <input type="text" name="sifraFirmeRegistarcija" id="sifraFirmeRegistarcija" placeholder="Šifra iz firme" required>
+            <br>
+            <br>
+            <button type="submit" id="registujSe" value="Registuj se">Registuj se</button>
+        </form>
+    </div>
+
+
+    <script src="OSPjsFajlovi/OSPbyUMPrijavaRegistracija.js"></script>
+    <script src="OSPjsFajlovi/citatiRandom.js"></script>
+</body>
+
+</html>

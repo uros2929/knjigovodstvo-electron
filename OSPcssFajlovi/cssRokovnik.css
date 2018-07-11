@@ -1,0 +1,128 @@
+
+#modalRokovnik{
+    position: relative;
+    float: right;
+    top: 0;
+    right: 5%;
+    text-align: center;
+    align-content: center;
+    display: none;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+   
+}
+#rokovnikForma{
+    border-bottom: 3px solid rgb(255, 85, 0);
+    position: relative;
+    left: 5%;
+    width: 100%;
+    color: white;
+    font-size: 30px;  
+}
+#upisObaveza{
+    position: relative;
+    float: left;
+    width: 65%;
+    margin: 1%;
+    height: 35px;
+    font-size: 24px;
+}
+#dugmePostaviStavku{
+    background-color: rgb(30,34,34);
+    text-decoration-line: none;
+    color: white;
+    font-size: 20px;
+    transition: all 500ms;
+    border-top: solid rgb(70, 73, 74) 3px;
+    border-bottom: solid rgb(70, 73, 74) 3px;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 6%;
+    padding: 0% 5%;
+    margin: 1%; 
+    min-height: 35px;
+}
+#dugmePostaviStavku:hover{
+    border-color:red; 
+    color:white;
+}
+#dugmeIzadjiIzRokovnika{
+width: 6px;
+height: 0%;
+height: 15px;
+font-size: 10px;
+font-weight: 700;
+position: relative;
+float: right;
+}
+#dugmeIzadjiIzRokovnika:hover{
+    border-color: rgb(255, 85, 0);
+}
+#mainRokovnik{
+    display: flex;
+    flex-direction: column;
+    min-height: 522px;
+    width: 100%;
+    position: relative;
+    left: 5%;
+}
+#lista{
+    position: relative;
+}
+#lista>li{
+    position: relative;
+    max-width: 95%;
+    height: auto;
+    padding: 5px;
+    margin-top: 10px;
+    border-top: solid red 1px;
+    border-bottom: solid red 1px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-style: italic;
+    color: white;
+    text-align: left;
+    text-decoration-line: none;
+}
+#lista>li>em{
+width: 10%;
+position: relative;
+float: right;  
+transition: all 500ms;
+cursor: pointer; 
+}
+#lista>li>em:hover{
+color:red;  
+}
+#footerRokovnik{
+    border-top: 3px solid rgb(255, 85, 0);
+    height: 55px;
+    position: relative;    
+    width:100%;
+    left: 5%;
+}    
+#footerRokovnik>a{       
+    text-decoration-line: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 40px;
+    transition: all 500ms;
+    margin: 0 auto;
+    border-top: solid rgb(70, 73, 74) 3px;
+    border-bottom: solid rgb(70, 73, 74) 3px;
+    border-radius: 10px;
+    text-align: center; 
+    position: relative;
+    top: 25%;    
+} 
+#footerRokovnik>a:hover{
+    border-color:red; 
+    color:white;
+}
+#stampanjeRokovnika{
+left: 36%;
+}

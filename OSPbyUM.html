@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssMainModal.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssKalendar.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssRokovnik.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssDigitron.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssGlavnaKnjiga.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssNabavka.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssAnalitikaRacuna.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssDokumenta.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssKreiranjeDokumenata.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/cssKnjizenjeRobe.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/kontakt.css">
+    <link rel="stylesheet" href="OSPcssFajlovi/sat.css">
+    <title>OSPbyUM</title>
+</head>
+
+<body>
+    <div id="celaStranica">
+        <header>
+            <a href="mailto:" id="PodatciUlogovanogKorisnika"></a>
+            <div id="sat"></div>
+            <div id="datumDiv"></div>
+            <div class="naslov">
+                <a href="OSPbyUM.html">
+                    <h1>
+                        <span class="naslov">OSP</span>byUM</h1>
+                </a>
+                
+            </div>
+            
+            <ul id="logoutDugme">
+                <li>
+                    <a>Odjavi se</a>
+                </li>
+            </ul>
+        </header>
+        <aside>
+            <button id="dugmeKalendar">Kalendar</button>
+            <button id="dugmeRokovnik">Rokovnik</button>
+            <hr>
+            <br>
+            <button id="dugmeDigitron">Digitron</button>
+            <br>
+            <button id="dugmeGlavnaKnjiga">Glavna knjiga</button>
+            <button id="dugmeNabavka">Nabavka</button>
+            <button id="dugmeAnalitikaRacuna">Analitika računa </button>
+            <button id="dugmeDokumenta">Dokumenta</button>
+            <button id="dugmeKreiranjeDokumenata">Kreiranje dokumenata</button>
+            <button id="dugmeKnjizenjeRobe">Knjiženje robe</button>
+            <hr>
+            <br>
+            <br>
+            <button id="ugasiCitat">Ugasi citate</button>
+            <button id="dugmeKontakt">Kontakt</button>
+        </aside>
+        <main>
+            <div id="mainSve">
+                    
+                <div id="modalKalendar">
+
+                    <div id="naslovKalendar">
+                        <div id="januar">Januar</div>
+                        <div id="februar">Februar</div>
+                        <div id="mart">Mart</div>
+                        <div id="april">April</div>
+                        <div id="maj">Maj</div>
+                        <div id="jun">Jun</div>
+                        <div id="jul">Jul</div>
+                        <div id="avgust">Avgust</div>
+                        <div id="septembar">Septembar</div>
+                        <div id="oktobar">Oktobar</div>
+                        <div id="novembar">Novembar</div>
+                        <div id="decembar">Decembar</div>
+                        <button id="dugmeIzadjiIzKalendara">X</button>
+                    </div>
+                    <div id="mainKalendar"></div>
+                </div>
+                <div id="modalRokovnik">
+                    <div>
+                        <form action="?" method="POST" id="rokovnikForma">
+                            <input type="text" id="upisObaveza" name="novaObaveza" placeholder="Upiši novu obavezu">
+                            <button type="submit" id="dugmePostaviStavku">Postavi</button>
+                            <button id="dugmeIzadjiIzRokovnika">X</button>
+                        </form>
+                    </div>
+                    <div id="mainRokovnik"></div>
+                    <div id="footerRokovnik">
+                        <a href="#" id="izbrisiRokovnik">Izbrisi sve</a>
+                        <a href="#" id="stampanjeRokovnika">Štampaj</a>
+                    </div>
+                </div>
+                <div id="modalDigitron">
+
+                    <div id="naslovDigitron">
+                        <button id="dugmeIzadjiIzDigitrona">X</button>
+                        <input type="text" id="prikazIskucanihBrojeva">
+
+                    </div>
+                    <div id="mainDigitron">
+                        <div id="digitronDugmici">
+                            <button id="reset">C</button>
+                            <button id="otvorenaZagrada" value="(">(</button>
+                            <button id="zatvorenaZagrada" value=")">)</button>
+                            <br>
+                            <button id="brojSedam" value="7">7</button>
+                            <button id="brojOsam" value="8">8</button>
+                            <button id="brojDevet" value="9">9</button>
+
+                            <button id="operacijaSabiranje" value="+">+</button>
+                            <br>
+
+                            <button id="brojCetiri" value="4">4</button>
+                            <button id="brojPet" value="5">5</button>
+                            <button id="brojSest" value="6">6</button>
+                            <button id="operacijaOduzimanje" value="-">-</button>
+                            <br>
+                            <button id="brojJedan" value="1">1</button>
+                            <button id="brojDva" value="2">2</button>
+                            <button id="brojTri" value="3">3</button>
+                            <button id="operacijaMnozenje" value="*">X</button>
+                            <br>
+
+                            <button id="brojNula" value="0">0</button>
+                            <button id="brojTacka" value=".">.</button>
+                            <button id="jednako">=</button>
+                            <button id="operacijaDeljenje" value="/">/</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modalGlavnaKnjiga">
+                    <div id="naslovGlavnaKnjiga">Glavna knjiga
+                        <button id="dugmeIzadjiIzGlavnaKnjiga">X</button>
+                    </div>
+                    <div id="mainGlavnaKnjiga"></div>
+                </div>
+                <div id="modalNabavka">
+                    <div id="naslovNabavka">
+                        <button id="dugmeIzadjiIzNabavka">X</button>
+                        <ul class="nalogZaNabavku">
+                            <li>
+                                <a href="dokumentaSabloni/nalogZaNavaku/nalogZaNabavku.html" target="_blank">Nalog za Nabavku</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div id="mainNabavka">
+                            <form action="?" method="POST" id="kontaktSaDobavljacima">
+                                <input type="text" id="emailDobavljaca" name="emailDobavljaca" placeholder="email dobavljača"><br>
+                                <button type="submit" id="dodajDobavljaca">Dodaj dobavljača</button>
+                            </form>
+                            <div id="ispisEmailaDobavljaca"></div>
+                    </div>
+                </div>
+                <div id="modalAnalitikaRacuna">
+                    <div id="naslovAnalitikaRacuna">Analitika računa
+                        <button id="dugmeIzadjiIzAnalitikaRacuna">X</button>
+                    </div>
+                    <div id="mainAnalitikaRacuna"></div>
+                </div>
+                <div id="modalDokumenta">
+                    <div id="naslovDokumenta">
+                        <button id="dugmeIzadjiIzDokumenata">X</button>
+                    </div>
+                    <div id="mainDokumenta">
+                        <ol type="1" class="olListaDokumenta">
+                            <li>
+                                <a href="dokumentaSabloni/faktura/faktura.html" target="_blank">Faktura</a>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+                <div id="modalKnjizenjeRobe">
+                    <div id="naslovKnjizenjeRobe">
+                        <button id="dugmeIzadjiIzKnjizenjeRobe">X</button>
+                    </div>
+                    <div id="mainKnjizenjeRobe">
+                        <button id="dugmeDodajProizvod">Dodaj proizvod</button>
+                        <form action="?" method="POST" id="knjizenjeRobeForma"></form>
+                    </div>
+                    <div id="footerKnjizenjeRobe"><button id="dugmeNapraviGrafik">Prikaz pomoću pite</button><button id="sacuvajKnjizenjeRobe">Sačuvaj</button><button id="stampanjeKnjizenjeRobe">Štampaj</button></div>
+                </div>
+                <div id="modalKreiranjeDokumenata">
+                    <div id="naslovKreiranjeDokumenata">
+                        <button id="dugmeIzadjiIzKreiranjeDokumenata">X</button>
+                    </div>
+                    <div id="mainKreiranjeDokumenata">
+                        <textarea name="upisivanjeTekstaZaNoviDokument" id="tekstKreiranogDokumenta"  rows="10" placeholder="Upiši tekst novog dokumenta!"></textarea>
+                        <input type="text" id="nazivDokumenta" placeholder="Naziv dokumenta">
+                        <button id="sacuvajDokument">Sačuvaj dokument</button><br>
+                        <button id="otvoriSacuvanaDokumenta">Otvori dokument</button>
+                    </div>
+                </div>
+                <div id="modalKontakt">
+                    <button id="dugmeIzadjiIzKontakt">X</button>
+                    <div id="kontaktInformacije">
+                        <h3>Uroš Marinković</h3>
+                        <h3>email: marinko29@live.com</h3>
+                        <h3>telefon: 069/22-33-835</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="textAreaKalendara"></div>
+            <div id="citatiRandom"></div>
+           
+
+        </main>
+
+    </div>
+
+    <script src="OSPjsFajlovi/sabloni.js"></script>
+    <script src="OSPjsFajlovi/logInPrikazKorisnika.js"></script>
+    <script src="OSPjsFajlovi/kalendar.js"></script>
+    <script src="OSPjsFajlovi/rokovnik.js"></script>
+    <script src="OSPjsFajlovi/digitron.js"></script>
+    <script src="OSPjsFajlovi/analitikaRacuna.js"></script>
+    <script src="OSPjsFajlovi/nabavka.js"></script>
+    <script src="OSPjsFajlovi/glavnaKnjiga.js"></script>
+    <script src="OSPjsFajlovi/dokumenta.js"></script>
+    <script src="OSPjsFajlovi/knjizenjeRobe.js"></script>
+    <script src="OSPjsFajlovi/kreiranjeDokumenata.js"></script>
+    <script src="OSPjsFajlovi/kontakt.js"></script>
+    <script src="OSPjsFajlovi/citatiRandom.js"></script>
+    <script src="OSPjsFajlovi/sat.js"></script>
+</body>
+
+</html>

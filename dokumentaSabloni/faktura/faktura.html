@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAKTURA</title>
+    <link rel="stylesheet" href="faktura.css">
+</head>
+
+<body>
+    <button id="dugmeDodajRed">Dodaj red</button>
+    <button id="resetujFakturu">Resetuj fakturu</button>
+    <button id="stampajFakturu">Štampaj</button>
+    <button id="sacuvajFakturu">Sačuvaj</button>
+    <div id="fakturaA4">
+        <h1>FAKTURA</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <form action="?" method="POST" id="fakturaPodatci">
+            <label for="fakturaBroj">FAKTURA BR.</label>
+            <input type="text" name="fakturaBroj" id="fakturaBroj">
+            <br>
+            <label for="datum">DATUM:</label>
+            <input type="text" name="datum" id="datum">
+        </form>
+        <div class="podatci">
+            <form action="?" method="POST" id="formaPosiljaoca">
+                <label for="imePreduzecaPosiljaoca">Ime Preduzeća:</label>
+                <input type="text" name="imePreduzeca" id="imePreduzecaPosiljaoca">
+                <br>
+                <label for="adresaPreduzeca">Adresa preduzeća:</label>
+                <input type="text" name="adresaPreduzeca" id="adresaPreduzeca">
+                <br>
+                <label for="telefon">Telefon:</label>
+                <input type="text" name="telefon" id="telefon">
+                <br>
+            </form>
+            <h3>Za:</h3>
+            <form action="?" method="POST" id="formaPrimaoca">
+                <label for="imePrimaoca">Ime primaoca:</label>
+                <input type="text" name="imePrimaoca" id="imePrimaoca">
+                <br>
+                <label for="imePreduzecaPrimaoca">Ime preduzeća:</label>
+                <input type="text" name="imePreduzeca" id="imePreduzecaPrimaoca">
+                <br>
+                <label for="ulicaIBroj">Ulica i broj:</label>
+                <input type="text" name="ulicaIBroj" id="ulicaIBroj">
+                <br>
+                <label for="gradDrzavaPPB">Grad,država,poštanski broj:</label>
+                <input type="text" name="gradDrzavaPPB" id="gradDrzavaPPB">
+                <br>
+                <label for="telefonPrimaoca">Telefon:</label>
+                <input type="text" name="telefonPrimaoca" id="telefonPrimaoca">
+            </form>
+        </div><br><br><br>
+        <div id="tabelaFaktureSve">
+                <table id="tabelaFakture">
+                   <thead id="headTabelaFakture"><tr><th>Br</th><th class="tabelaKolicina">KOLIČINA</th><th class="tabelaOpis">OPIS</th><th class="tabelaCena">CENA PO JEDINICI</th><th class="tabelaCena">UKUPNO</th></tr></thead>
+                   <tbody id="tabelaBody">
+                <tr><td>1</td><td class="tabelaKolicina"><input type="text" placeholder="Količina"></td><td class="tabelaOpis"><input type="text" class="opisInput" placeholder="Unesite opis"></td><td class="tabelaCena"><input type="text" placeholder="Unesite cenu"></td><td class="tabelaCena"><input type="text" placeholder="Unesite ukupan iznos"></td></tr>
+                </table>
+    </div>
+    <form action="?" method="POST" id="ukupneVrednosti" style="position: relative; left: 2%">
+            <label><strong>MEĐUVREDNOST: </strong></lable><input type="text"  placeholder="Unesite međuvrednosti" style="width: 30%"><br>
+            <lable><strong>POREZ NA PROMET: </strong></lable><input type="text"  placeholder="Unesite porez na promet" style="width: 28%"><br>
+            <lable><strong>UKUPNO DUGOVANJE: </strong></lable><input type="text" placeholder="Unesite ukupno dugovanje" style="width: 25%">
+            </form><br><br><br><br>
+
+    <div id="hvala" style="width: 96%;text-align: center;"><h2>HVALA NA SARADNJI!</h2></div>
+    </div>
+
+ 
+
+
+
+    <script src="faktura.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,211 @@
+*html{ box-sizing:border-box; }
+* , *:before, *:after{ box-sizing:inherit; }
+#formaRegistrujSe,#formaZaboravljenaSifra{
+    display: none;
+}
+body{
+    background-color: rgb(30, 34, 34);
+}
+
+.naslovA{
+    width: 20%;
+    text-align: center;
+  
+}
+.naslovA{
+    color: white;
+    text-decoration-line: none;
+}
+.naslovA>h1{
+    margin-bottom: 2%;
+    position: relative;
+    margin-top: -3%;
+    font-size: 50px;
+    width: 20%;
+    margin-left: 40%;
+}
+span.naslov{
+    color: rgb(255,85,0);
+    font-style: italic;
+    font-weight: bold;
+}
+/*Log In Stranica*/
+#formaLogIn{
+    background-color: rgb(26, 26, 29);
+    list-style: none;
+    width: 60%;
+    margin: 90px auto;
+    padding: 0;
+    text-align: center;
+    border: 4px solid rgb(255, 85, 0);
+    min-height: 500px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+#emailLog,#passLog{
+    border-color: rgb(255, 85, 0);
+    text-align: center;
+    width: 40%;
+    height: 35px;
+    margin-top: 5%;
+    font-size: 24px;
+}
+#lable{
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    top: 20px;
+}
+#dugmePrijaviSe,#dugmeRegistujSe{
+    width: 25%;
+    height: 35px; 
+    cursor: pointer;  
+    background-color: rgb(30, 34, 34);
+    border-color:  rgb(30, 34, 34);
+    color: white;
+    margin-top: 3%;
+    font-size: 24px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+#dugmePrijaviSe:hover,#dugmeRegistujSe:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+}
+#dugmeZaboravljenaSifra{
+    border: solid 1px rgb(26, 26, 29);
+    display: block;
+    text-decoration: none;
+    color: white; 
+    width: 15%;
+    height: 35px;
+    background-color: rgb(255, 85, 0);
+    text-align: center;
+    position: relative;
+    left: 42.5%;
+    font-size: 24px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+#dugmeZaboravljenaSifra:hover{
+    border-color: rgb(255, 85, 0);
+    background-color: rgb(26, 26, 29);
+}
+
+/*Registuj se forma*/
+
+#formaRegistrujSeSve{
+    list-style: none;
+    width: 40%;
+    margin: 20px auto;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(63, 63, 66);
+}
+strong{
+color: white;
+font-weight: 700;
+font-size: 24px;
+}
+#registujSe{
+    width: 25%;
+    height: 35px; 
+    cursor: pointer;  
+    background-color: rgb(30, 34, 34);
+    border-color:  rgb(30, 34, 34);
+    color: white;
+    font-size: 24px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+#registujSe:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+}
+#imeRegistracija,#prezimeRegistracija,#emailRegistracija,#firmaRegistracija,#passwordRegistracija,#potvrdiPasswordRegistracija,#sifraFirmeRegistarcija{
+    border-color: rgb(255, 85, 0);
+    text-align: center;
+    width: 30%;
+    height: 30px;  
+    font-size: 24px;
+}
+/*Zaboravljena sifra forma*/
+#formaZaboravljenaSifra{
+    list-style: none;
+    width: 40%;
+    margin: 10% auto;
+    padding: 0;
+    text-align: center;  
+    background-color: rgb(63, 63, 66);
+  
+}
+#UkucajSifruIzFirme,#ukucajEmail{
+    color: white;
+    font-weight: 700;
+    font-size: 24px;  
+}
+#dugmePotvrdiProveru{
+    width: 25%;
+    height: 35px; 
+    cursor: pointer;  
+    background-color: rgb(30, 34, 34);
+    border-color:  rgb(30, 34, 34);
+    color: white;
+    font-size: 24px; 
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+#dugmePotvrdiProveru:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+}
+#prikazZaboravljeneSifre{
+    color: white;
+    font-weight: 600;
+    font-size: 24px; 
+    position: relative;
+   bottom: 240px;
+}
+#odgovorEmail,#odgovor{
+    border-color: rgb(255, 85, 0);
+    text-align: center;
+    width: 30%;
+    height: 30px; 
+    font-size: 24px;
+}
+#citatiRandom{
+    width: 50%;
+    height: 250px;
+    margin-left:5%;
+    color: white;
+    position: absolute;
+    bottom: 3%;
+    font-size: 42px;
+    font-family:'Brush Script MT', 'Brush Script Std', cursive;
+}
+#ugasiCitat{
+background-color: rgb(26,26,29);
+border-color: rgb(63, 63, 66);
+color: white;
+margin: 1% 1% 1% 0%;
+width: 10%;
+font-size: 24px;
+font-weight: 500;
+-webkit-transition-duration: 0.4s; 
+transition-duration: 0.4s;
+}
+#ugasiCitat:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+}
+#dugmeVratiSe{
+    position: absolute;
+    width: 2%;
+    left: 30%;
+    height: 15px;
+    float: left;
+    border-color: rgb(255, 85, 0);
+    background: rgb(26, 26, 29);
+    color: white;
+}

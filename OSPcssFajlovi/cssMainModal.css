@@ -1,0 +1,121 @@
+*html{ box-sizing:border-box; }
+* , *:before, *:after{ box-sizing:inherit; }
+body{
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    background-color: rgb(26, 26, 29);
+}
+#celaStranica{
+    max-width: 1600px;
+    margin: 0 auto;  
+}
+header{
+    background-color: rgb(30,34,34); 
+    border: 3px solid rgb(255,85,0);
+    position: relative;
+}
+#PodatciUlogovanogKorisnika{
+    color: white;
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    top: 10px;
+    font-size: 35px;
+    left: 95px;
+
+} 
+#PodatciUlogovanogKorisnika>h4{
+    font-weight: 700;
+}
+.naslov{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  
+}
+.naslov h1{
+    font-size: 50px;
+}
+.naslov>a{
+    color: white;
+    text-decoration-line: none;
+}
+.naslov span{
+    color: rgb(255,85,0);
+    font-style: italic;
+    font-weight: bold;
+}
+.naslov h1{font-style: italic;}
+.podatciKorisnika h4{text-decoration: underline;}
+#logoutDugme{list-style: none;text-decoration-line: none;position: relative;margin-bottom: 0%;cursor: pointer;width: 10%;right: 2%;}
+#logoutDugme li{display: inline-block;background:rgb(30, 34, 34);text-decoration-line: none;}
+#logoutDugme li:hover{background-color: rgb(63, 63, 66);}
+#logoutDugme li a{display: block;padding:5px 15px;border:solid rgb(255, 85, 0) 2px;color: white;font-size: 20px;}
+
+  /*//////////////////////////////////////////////////   MAIN    ////////////////////////////////////*/
+main{
+    background-color: rgb(30,34,34); 
+    position: relative;
+    float: right;
+    min-width: 83%;
+    border: 3px solid rgb(255, 85, 0);
+    margin: 1% 0 1% 1%;
+}
+#mainSve{
+    display: flex;
+    flex-flow: row wrap;
+    min-height:650px;
+}
+/*/////////////////////// ASAID /////////////////*/
+aside{
+    background-color: rgb(30, 34, 34);
+    position: relative;
+    float: left;
+    max-width: 15%;
+    min-height: 650px;
+    margin-top: 1%;
+    border: 3px solid rgb(255, 85, 0);
+}
+aside>button{
+background-color: rgb(26,26,29);
+border-color: rgb(63, 63, 66);
+color: white;
+margin: 3% 3% 3% 6%;
+width: 80%;
+font-size: 24px;
+font-weight: 500;
+-webkit-transition-duration: 0.4s; 
+transition-duration: 0.4s;
+}
+aside>button:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
+
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+#citatiRandom{
+    display: block;
+    width: 90%;
+    height: 200px;
+    margin-left: 2%;
+    color: white;
+    position: absolute;
+    top: 110%;
+    font-size: 42px;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+}
+
+
+

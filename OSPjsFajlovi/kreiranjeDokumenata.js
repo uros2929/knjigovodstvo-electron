@@ -1,0 +1,80 @@
+let modalKreiranjeDokumenata = document.getElementById("modalKreiranjeDokumenata");
+document.getElementById("dugmeKreiranjeDokumenata").addEventListener('click', prikaziModalKreiranjeDokumenata);
+document.getElementById("dugmeIzadjiIzKreiranjeDokumenata").addEventListener('click', skloniModalKreiranjeDokumenata);
+
+
+
+function prikaziModalKreiranjeDokumenata() {
+    modalKreiranjeDokumenata.style.display = 'none'
+    if (modalKreiranjeDokumenata.style.display == "none") {
+        modalKreiranjeDokumenata.style.display = "block";
+        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
+    }
+}
+function skloniModalKreiranjeDokumenata() {
+    if (modalKreiranjeDokumenata.style.display == "block") {
+        modalKreiranjeDokumenata.style.display = "none";
+        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
+        location.reload();
+    }
+}
+
+let sistemDokumenata = require('fs'),
+    dugmeSacuvajDokument = document.getElementById('sacuvajDokument');
+function cuvanjeDokumenta() {
+    dugmeSacuvajDokument.addEventListener('click', (event) => {
+        event.preventDefault();
+        let tekstKreiranogDokumenta = document.getElementById('tekstKreiranogDokumenta').value;
+        let nazivDokumenta = document.getElementById('nazivDokumenta').value;
+        let nazivDokumentaSacuvanog = `kreiranaDokumenta/${nazivDokumenta}.txt`;
+        let proveraNazivaDokumenta = sistemDokumenata.existsSync(`kreiranaDokumenta/${nazivDokumenta}.txt`);
+        if (proveraNazivaDokumenta === true) {
+            let potvrda = confirm('Upisali ste postojeće ime dokumenta ! Ako želite da zamenite stari tekst dokumenta sa trenutnim tekstom,potvrdite');
+            if (potvrda == true) {
+                alert('Uspešno ste promenili tekst starog dokumenta')
+            } else {
+                alert('Promenite ime dokumenta !');
+                return;
+            }
+        }
+        sistemDokumenata.writeFile(nazivDokumentaSacuvanog, tekstKreiranogDokumenta, "utf-8", (error) => {
+            if (error) {
+                return console.log(error);
+            }
+            if (tekstKreiranogDokumenta == "") {
+                return alert('Upišite tekst novog dokumenta !');
+            }
+            if (nazivDokumenta == "") {
+                return alert('Upišite naziv dokumenta !')
+            }
+            alert("Dokument uspešno sačuvan !");
+        });
+
+    })
+}
+cuvanjeDokumenta();
+
+
+let otvoriSacuvanaDokumenta = document.getElementById('otvoriSacuvanaDokumenta');
+let app = require('electron').remote;
+let dialog = app.dialog;
+function otvoriDokumenta() {
+    otvoriSacuvanaDokumenta.addEventListener('click', (event) => {
+        event.preventDefault();
+        dialog.showOpenDialog((imeFajla) => {
+            if (imeFajla === undefined) {
+                console.log('Greška!')
+            } else {
+                readFile(imeFajla[0]);
+            }
+        })
+    })
+}
+otvoriDokumenta();
+
+function readFile(filepath) {
+    let fileIspis = sistemDokumenata.readFileSync(filepath, "utf-8")
+    let tekstKreiranogDokumentaCitanje = document.getElementById('tekstKreiranogDokumenta');
+    tekstKreiranogDokumentaCitanje.innerHTML = fileIspis;
+}
+
