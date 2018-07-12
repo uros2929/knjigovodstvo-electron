@@ -181,11 +181,18 @@
                         <button id="dugmeIzadjiIzKnjizenjeRobe">X</button>
                     </div>
                     <div id="mainKnjizenjeRobe">
-                        <button id="dugmeDodajProizvod">Dodaj proizvod</button>
-                        <form action="?" method="POST" id="knjizenjeRobeForma"></form>
-                    </div>
-                    <div id="footerKnjizenjeRobe"><button id="dugmeNapraviGrafik">Prikaz pomoću pite</button><button id="sacuvajKnjizenjeRobe">Sačuvaj</button><button id="stampanjeKnjizenjeRobe">Štampaj</button></div>
-                </div>
+                        <div id="formaKnjizenje">
+                         <form action="?" method="POST" id="knjizenjeRobeForma">
+                             <label for="sifraProizvoca">Šifra proizvoda : </label> <input type="text" name="sifraProizvoda" id="sifraProizvoda" ><br><br><br>
+                             <label for="nazivProizvoda">Naziv : </label> <input type="text" name="nazivProizvoda" id="nazivProizvoda" > <br> <br><br>
+                             <label for="kolicinaProizvoda">Količina : </label><input type="number" name="kolicinaProizvoda" id="kolicinaProizvoda"><br><br><br>
+                             <label for="opisProizvod">Opis : </label><input type="text" name="opisProizvod" id="opisProizvod">
+                         </form>
+                     </div>
+                     <div id="prikazIzFormeKnjizenje"></div>
+                     </div>
+                     <div id="footerKnjizenjeRobe"><button id="dugmeDodajProizvod">Dodaj proizvod</button></div>
+                 </div>
                 <div id="modalKreiranjeDokumenata">
                     <div id="naslovKreiranjeDokumenata">
                         <button id="dugmeIzadjiIzKreiranjeDokumenata">X</button>
