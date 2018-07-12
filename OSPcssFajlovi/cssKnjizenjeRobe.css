@@ -110,3 +110,36 @@ background-color: rgb(26,26,29);
     width: 80%;
     margin-top: 1%;
 }
+#modalKnjizenjeRobePrikazProizvoda{
+    position: fixed;
+    top: 24%;
+    right: 8%;
+    text-align: center;
+    align-content: center;
+    display: none;
+    height: 60%;
+    width: 49%;
+    background-color: rgb(63, 63, 66);
+    color: white;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    border: solid 4px rgb(255, 85, 0);
+    
+}
+#dugmeIzadjiIzmodalKnjizenjeRobePrikazProizvoda{
+    position: relative;
+    float: right;
+    width: 12px;
+    height: 15px;
+    font-size: 11px;
+    font-weight: 700;    
+    }
+#dugmeIzadjiIzmodalKnjizenjeRobePrikazProizvoda:hover{
+     border-color: rgb(255, 85, 0);
+    }
+#prikazProizvodaIzLocala{
+    position: relative;
+    float: left;
+    margin-top: 5%;
+    margin-left: 3%;
+}

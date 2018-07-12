@@ -31,9 +31,9 @@
                     <h1>
                         <span class="naslov">OSP</span>byUM</h1>
                 </a>
-                
+
             </div>
-            
+
             <ul id="logoutDugme">
                 <li>
                     <a>Odjavi se</a>
@@ -61,7 +61,7 @@
         </aside>
         <main>
             <div id="mainSve">
-                    
+
                 <div id="modalKalendar">
 
                     <div id="naslovKalendar">
@@ -150,11 +150,12 @@
 
                     </div>
                     <div id="mainNabavka">
-                            <form action="?" method="POST" id="kontaktSaDobavljacima">
-                                <input type="text" id="emailDobavljaca" name="emailDobavljaca" placeholder="email dobavljača"><br>
-                                <button type="submit" id="dodajDobavljaca">Dodaj dobavljača</button>
-                            </form>
-                            <div id="ispisEmailaDobavljaca"></div>
+                        <form action="?" method="POST" id="kontaktSaDobavljacima">
+                            <input type="text" id="emailDobavljaca" name="emailDobavljaca" placeholder="email dobavljača">
+                            <br>
+                            <button type="submit" id="dodajDobavljaca">Dodaj dobavljača</button>
+                        </form>
+                        <div id="ispisEmailaDobavljaca"></div>
                     </div>
                 </div>
                 <div id="modalAnalitikaRacuna">
@@ -182,25 +183,50 @@
                     </div>
                     <div id="mainKnjizenjeRobe">
                         <div id="formaKnjizenje">
-                         <form action="?" method="POST" id="knjizenjeRobeForma">
-                             <label for="sifraProizvoca">Šifra proizvoda : </label> <input type="text" name="sifraProizvoda" id="sifraProizvoda" ><br><br><br>
-                             <label for="nazivProizvoda">Naziv : </label> <input type="text" name="nazivProizvoda" id="nazivProizvoda" > <br> <br><br>
-                             <label for="kolicinaProizvoda">Količina : </label><input type="number" name="kolicinaProizvoda" id="kolicinaProizvoda"><br><br><br>
-                             <label for="opisProizvod">Opis : </label><textarea name="opisProizvod" id="opisProizvod" cols="30" rows="10"></textarea> 
-                         </form>
-                     </div>
-                     <div id="prikazIzFormeKnjizenje"></div>
-                     </div>
-                     <div id="footerKnjizenjeRobe"><button id="dugmeDodajProizvod">Dodaj proizvod</button></div>
-                 </div>
+                            <form action="?" method="POST" id="knjizenjeRobeForma">
+                                <label for="sifraProizvoca">Šifra proizvoda : </label>
+                                <input type="text" name="sifraProizvoda" id="sifraProizvoda">
+                                <br>
+                                <br>
+                                <br>
+                                <label for="nazivProizvoda">Naziv : </label>
+                                <input type="text" name="nazivProizvoda" id="nazivProizvoda">
+                                <br>
+                                <br>
+                                <br>
+                                <label for="kolicinaProizvoda">Količina : </label>
+                                <input type="number" name="kolicinaProizvoda" id="kolicinaProizvoda">
+                                <br>
+                                <br>
+                                <br>
+                                <label for="opisProizvod">Opis : </label>
+                                <textarea name="opisProizvod" id="opisProizvod" cols="30" rows="10"></textarea>
+                            </form>
+                        </div>
+                        <div id="prikazIzFormeKnjizenje"></div>
+                    </div>
+                    <div id="footerKnjizenjeRobe">
+                        <button id="dugmeDodajProizvod">Dodaj proizvod</button>
+                    </div>
+                    <div id="modalKnjizenjeRobePrikazProizvoda">
+                        <button id="dugmeIzadjiIzmodalKnjizenjeRobePrikazProizvoda">X</button>
+                        <div id="prikazProizvodaIzLocala">
+                        <h2 >Šifra proizvoda : </h2><h2 id="sifraProizvodaPrikaz"></h2>
+                        <h2 >Naziv proizvoda : </h2><h2 id="nazivProizvodaPrikaz"></h2>
+                        <h2 >Količina proizvoda : </h2><h2 id="kolicinaProizvodaPrikaz"></h2>
+                        <h2 >Opis proizvoda : </h2><h2 id="opisProizvodaPrikaz"></h2>
+                    </div>
+                </div>
+                </div>
                 <div id="modalKreiranjeDokumenata">
                     <div id="naslovKreiranjeDokumenata">
                         <button id="dugmeIzadjiIzKreiranjeDokumenata">X</button>
                     </div>
                     <div id="mainKreiranjeDokumenata">
-                        <textarea name="upisivanjeTekstaZaNoviDokument" id="tekstKreiranogDokumenta"  rows="10" placeholder="Upiši tekst novog dokumenta!"></textarea>
+                        <textarea name="upisivanjeTekstaZaNoviDokument" id="tekstKreiranogDokumenta" rows="10" placeholder="Upiši tekst novog dokumenta!"></textarea>
                         <input type="text" id="nazivDokumenta" placeholder="Naziv dokumenta">
-                        <button id="sacuvajDokument">Sačuvaj dokument</button><br>
+                        <button id="sacuvajDokument">Sačuvaj dokument</button>
+                        <br>
                         <button id="otvoriSacuvanaDokumenta">Otvori dokument</button>
                     </div>
                 </div>
@@ -215,7 +241,7 @@
             </div>
             <div id="textAreaKalendara"></div>
             <div id="citatiRandom"></div>
-           
+
 
         </main>
 
