@@ -44,7 +44,7 @@ function ispisDobavljacaNaStranicu() {
     }
     let prikazDobavljacaHTML = '<ul id="prikazDobavljaca">';
     for (let kljucDobavljaca in dobavljaci) {
-        prikazDobavljacaHTML += `<li id="dobavljaciID"><a href="mailto:${dobavljaci[kljucDobavljaca]}">${dobavljaci[kljucDobavljaca]}</a><button id="izbrisiDobavljaca${dobavljaci[kljucDobavljaca]}" onClick="dugmeIzbrisiCekiraneDobavljace(event)">Izbriši dobavljača</button></li>`;
+        prikazDobavljacaHTML += `<li id="dobavljaciID"><a href="mailto:${dobavljaci[kljucDobavljaca]}"title="Pošalji mail dobavljaču">${dobavljaci[kljucDobavljaca]}</a><button id="izbrisiDobavljaca${dobavljaci[kljucDobavljaca]}" onClick="dugmeIzbrisiCekiraneDobavljace(event)">Izbriši dobavljača</button></li>`;
     }
     prikazDobavljacaHTML += '</ul>'
     ispisEmailaDobavljaca.innerHTML = prikazDobavljacaHTML;
