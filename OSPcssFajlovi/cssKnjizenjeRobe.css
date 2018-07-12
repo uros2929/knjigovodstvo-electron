@@ -143,3 +143,6 @@ background-color: rgb(26,26,29);
     margin-top: 5%;
     margin-left: 3%;
 }
+#prikazProizvodaIzLocala h2{
+display: inline;
+}
