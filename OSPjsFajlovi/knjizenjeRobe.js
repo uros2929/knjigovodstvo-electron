@@ -21,7 +21,8 @@ proizvodi={};
 function sacuvajProizvodULocalStorage() {
     dugmeDodajProizvod.addEventListener('click',(event)=>{
         event.preventDefault();
-        let sifraProizvoda=document.getElementById('sifraProizvoda').value,
+        let knjizenjeRobeForma=document.getElementById('knjizenjeRobeForma'),
+            sifraProizvoda=document.getElementById('sifraProizvoda').value,
             nazivProizvoda=document.getElementById('nazivProizvoda').value,
             kolicinaProizvoda=document.getElementById('kolicinaProizvoda').value,
             opisProizvoda=document.getElementById('opisProizvod').value,
@@ -45,6 +46,7 @@ function sacuvajProizvodULocalStorage() {
         setToLocalStorage('knjizenjeProizvoda',proizvodi);
         alert('Uspešno ste dodali novi proizvod');
         prikazSacuvanihProizvoda();
+        knjizenjeRobeForma.reset();
     })
    
 }
@@ -61,7 +63,7 @@ function prikazSacuvanihProizvoda() {
         }
         let knjizenjeRobeStavkeHTML = '<ul id="lista">';
         for (let kljucKnjizenjeRobe in proizvodi) {
-            knjizenjeRobeStavkeHTML += `<li id="knjizenjeRobestavkaID${kljucKnjizenjeRobe}">${kljucKnjizenjeRobe}<em id="dugmeIzbrisiID${kljucKnjizenjeRobe}" onclick="">izbrisi</em><em id="dugmeIzmeniID${kljucKnjizenjeRobe}" onclick="">izmeni</em></li>`;  
+            knjizenjeRobeStavkeHTML += `<li id="knjizenjeRobestavkaID${kljucKnjizenjeRobe}">${kljucKnjizenjeRobe}<em id="dugmeIzbrisiID${kljucKnjizenjeRobe}" onclick="izbrisiProizvod(event)">izbrisi</em><em id="dugmeIzmeniID${kljucKnjizenjeRobe}" onclick="izmeniProizvod(event)">izmeni</em></li>`;  
            
            
         }
@@ -70,3 +72,31 @@ function prikazSacuvanihProizvoda() {
     
 }
 prikazSacuvanihProizvoda();
+function izbrisiProizvod(event) {
+    event.preventDefault();
+    robaIzLocalStorage=getFromLocalStorage('knjizenjeProizvoda');
+    let kljucSacuvanogProizvoda=event.target.id.substring(14);
+     delete robaIzLocalStorage[kljucSacuvanogProizvoda] 
+     localStorage.setItem('knjizenjeProizvoda',JSON.stringify(robaIzLocalStorage));
+     prikazSacuvanihProizvoda();
+}
+function izmeniProizvod(event) {
+    event.preventDefault();
+    robaIzLocalStorage=getFromLocalStorage('knjizenjeProizvoda');
+    let kljucSacuvanogProizvoda=event.target.id.substring(13),
+        izvucenoIzObjekta=robaIzLocalStorage[kljucSacuvanogProizvoda];
+        delete robaIzLocalStorage[kljucSacuvanogProizvoda];
+        localStorage.setItem('knjizenjeProizvoda',JSON.stringify(robaIzLocalStorage));
+    let sifraProizvodaIzvucena=izvucenoIzObjekta.sifra,
+        nazivProizvodaIzvucen=izvucenoIzObjekta.naziv,
+        kolicinaProizvodaIzvucena=izvucenoIzObjekta.kolicina,
+        opisProizvodaIzvucen=izvucenoIzObjekta.opis;
+        
+        document.getElementById('sifraProizvoda').value=sifraProizvodaIzvucena;
+        document.getElementById('nazivProizvoda').value=nazivProizvodaIzvucen;
+        document.getElementById('kolicinaProizvoda').value=kolicinaProizvodaIzvucena;
+        document.getElementById('opisProizvod').value=opisProizvodaIzvucen;
+
+        prikazSacuvanihProizvoda();
+
+}

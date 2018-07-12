@@ -102,4 +102,11 @@ background-color: rgb(26,26,29);
 #prikazIzFormeKnjizenje li{
     width: 100%;
 }
-
+#opisProizvod{
+    position: relative;
+    float: left;
+}
+#kolicinaProizvoda,#nazivProizvoda,#sifraProizvoda{
+    width: 80%;
+    margin-top: 1%;
+}
