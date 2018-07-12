@@ -59,7 +59,7 @@ function prikaziStavkeUHtml() {
 function izbrisSveStavkeIzRokovnika() {
     izbrisiSveIzRokovnika.addEventListener("click", (event) => {
         event.preventDefault();
-        let potvrda = confirm("Da li ste sigurni")
+        let potvrda = confirm("Da li ste sigurni ?")
         if (potvrda = true) {
             removeFromLocalStorage("RokovnikStavke");
             prikaziStavkeUHtml();
@@ -69,10 +69,13 @@ function izbrisSveStavkeIzRokovnika() {
 }
 function izbrisiObavezu(event) {
     event.preventDefault();
-    izvucenRokovnikIzLocala=getFromLocalStorage('RokovnikStavke');
-    delete izvucenRokovnikIzLocala[event.target.id.substring(14)];
-    localStorage.setItem('RokovnikStavke',JSON.stringify(izvucenRokovnikIzLocala));
-    prikaziStavkeUHtml();
+    let potvrda = confirm("Da li ste sigurni ?");
+    if (potvrda == true) {
+        izvucenRokovnikIzLocala = getFromLocalStorage('RokovnikStavke');
+        delete izvucenRokovnikIzLocala[event.target.id.substring(14)];
+        localStorage.setItem('RokovnikStavke', JSON.stringify(izvucenRokovnikIzLocala));
+        prikaziStavkeUHtml();
+    }
 }
 
 function izmeniObavezu(event) {

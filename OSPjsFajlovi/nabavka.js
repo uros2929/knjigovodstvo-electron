@@ -53,7 +53,7 @@ function ispisDobavljacaNaStranicu() {
 ispisDobavljacaNaStranicu();
 function dugmeIzbrisiCekiraneDobavljace(event) {
     event.preventDefault();
-    let potvrda = confirm("Da li ste sigurni")
+    let potvrda = confirm("Da li ste sigurni ?")
     if (potvrda == true) {
         let izvuceno = getFromLocalStorage('Dobavljaci');
         delete izvuceno[event.target.id.substring(17)];

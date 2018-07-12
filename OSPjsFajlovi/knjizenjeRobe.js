@@ -74,11 +74,14 @@ function prikazSacuvanihProizvoda() {
 prikazSacuvanihProizvoda();
 function izbrisiProizvod(event) {
     event.preventDefault();
-    robaIzLocalStorage=getFromLocalStorage('knjizenjeProizvoda');
-    let kljucSacuvanogProizvoda=event.target.id.substring(14);
-     delete robaIzLocalStorage[kljucSacuvanogProizvoda] 
-     localStorage.setItem('knjizenjeProizvoda',JSON.stringify(robaIzLocalStorage));
-     prikazSacuvanihProizvoda();
+    let potvrda = confirm("Da li ste sigurni ?");
+    if (potvrda == true) {
+        robaIzLocalStorage = getFromLocalStorage('knjizenjeProizvoda');
+        let kljucSacuvanogProizvoda = event.target.id.substring(14);
+        delete robaIzLocalStorage[kljucSacuvanogProizvoda]
+        localStorage.setItem('knjizenjeProizvoda', JSON.stringify(robaIzLocalStorage));
+        prikazSacuvanihProizvoda();
+    }
 }
 function izmeniProizvod(event) {
     event.preventDefault();
