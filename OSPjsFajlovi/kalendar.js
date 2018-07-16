@@ -15,7 +15,6 @@ function skloniModalKalendar(event) {
     if (modalKalendar.style.display == "block") {
         modalKalendar.style.display = "none";
         odBlokirajDugmice("dugmeDigitron", "dugmeRokovnik", "dugmeGlavnaKnjiga", "dugmeNabavka", "dugmeAnalitikaRacuna", "dugmeDokumenta", "dugmeKreiranjeDokumenata", "dugmeKnjizenjeRobe", "dugmeKontakt");
-        sacuvajPodatkeTextA.style.display = "none";
     }
 }
 
@@ -125,7 +124,12 @@ function textAreaKalendaraCuvanjePrikaz(klikZaPrikazTArea, dugme) {
         textAreaKalendara.innerHTML += `<button id="sacuvajPodatkeTextA${dugme}">Sačuvaj</button>`;
         let TAstavke=localStorage.getItem("textAreaSacuvaniTekst");
         if (TAstavke=== null) {
-            TAlocalStorage={}
+            for (let dugmeA = 1; dugmeA <= 12; dugmeA++) {
+                let kljucKlasaTekstaVrednost = `textArea${dugmeA}`;
+            TAlocalStorage[kljucKlasaTekstaVrednost] = "Upisi obaveze !";
+            setToLocalStorage(`textAreaSacuvaniTekst`, TAlocalStorage);  
+                
+            }
          
         }else{
             TAlocalStorage=JSON.parse(TAstavke);
