@@ -147,12 +147,12 @@ font-size: 24px;
     font-size: 24px;
 }
 #citatiRandom{
-    width: 50%;
+    width: 25%;
     height: 250px;
-    margin-left:5%;
+    margin-left:-14%;
     color: white;
     position: absolute;
-    bottom: 3%;
+    bottom: 40%;
     font-size: 42px;
     font-family:'Brush Script MT', 'Brush Script Std', cursive;
 }
