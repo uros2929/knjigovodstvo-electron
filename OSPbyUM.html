@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="OSPcssFajlovi/cssMainModal.css">
     <link rel="stylesheet" href="OSPcssFajlovi/cssKalendar.css">
     <link rel="stylesheet" href="OSPcssFajlovi/cssRokovnik.css">
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-    <div id="celaStranica">
+    <div id="celaStranica" class="container">
         <header>
             <a href="mailto:" id="PodatciUlogovanogKorisnika" title="Otvori default mail program"></a>
             <div id="sat"></div>
@@ -43,17 +44,15 @@
         <aside>
             <button id="dugmeKalendar">Kalendar</button>
             <button id="dugmeRokovnik">Rokovnik</button>
-            <hr>
+            <br>
             <br>
             <button id="dugmeDigitron">Digitron</button>
-            <br>
             <button id="dugmeGlavnaKnjiga">Glavna knjiga</button>
             <button id="dugmeNabavka">Nabavka</button>
             <button id="dugmeAnalitikaRacuna">Analitika računa </button>
             <button id="dugmeDokumenta">Dokumenta</button>
             <button id="dugmeKreiranjeDokumenata">Kreiranje dokumenata</button>
             <button id="dugmeKnjizenjeRobe">Knjiženje robe</button>
-            <hr>
             <br>
             <br>
             <button id="ugasiCitat" title="Dupli klik da se vrate citati !">Ugasi citate</button>
@@ -141,7 +140,7 @@
                 </div>
                 <div id="modalNabavka">
                     <div id="naslovNabavka">
-                        <button id="dugmeIzadjiIzNabavka">X</button>
+                        <button id="dugmeIzadjiIzNabavka">X</button><br>
                         <ul class="nalogZaNabavku">
                             <li>
                                 <a href="dokumentaSabloni/nalogZaNavaku/nalogZaNabavku.html" target="_blank">Nalog za Nabavku</a>
@@ -211,12 +210,22 @@
                     <div id="modalKnjizenjeRobePrikazProizvoda">
                         <button id="dugmeIzadjiIzmodalKnjizenjeRobePrikazProizvoda">X</button>
                         <div id="prikazProizvodaIzLocala">
-                        <h2 >Šifra proizvoda : </h2><h2 id="sifraProizvodaPrikaz"></h2><br><br>
-                        <h2 >Naziv proizvoda : </h2><h2 id="nazivProizvodaPrikaz"></h2><br><br>
-                        <h2 >Količina proizvoda : </h2><h2 id="kolicinaProizvodaPrikaz"></h2><br><br>
-                        <h2 >Opis proizvoda : </h2><h2 id="opisProizvodaPrikaz"></h2>
+                            <h2>Šifra proizvoda : </h2>
+                            <h2 id="sifraProizvodaPrikaz"></h2>
+                            <br>
+                            <br>
+                            <h2>Naziv proizvoda : </h2>
+                            <h2 id="nazivProizvodaPrikaz"></h2>
+                            <br>
+                            <br>
+                            <h2>Količina proizvoda : </h2>
+                            <h2 id="kolicinaProizvodaPrikaz"></h2>
+                            <br>
+                            <br>
+                            <h2>Opis proizvoda : </h2>
+                            <h2 id="opisProizvodaPrikaz"></h2>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div id="modalKreiranjeDokumenata">
                     <div id="naslovKreiranjeDokumenata">
