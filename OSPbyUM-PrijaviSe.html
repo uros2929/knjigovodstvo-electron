@@ -7,15 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="&copy; Copyright by UM">
     <link rel="stylesheet" href="OSPcssFajlovi/OSPbyUMPrijaviSeRegistrujSe.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>OSPbyUM</title>
 </head>
 
-<body>
-    <button id="ugasiCitat">Ugasi citate</button>
-    <a href="OSPbyUM-PrijaviSe.html" class="naslovA">
-        <h1>
+<body style="background-color: rgb(30, 34, 34);">
+    <div  class="container">
+    <button id="ugasiCitat" class="btn btn-lg">Ugasi citate</button>
+  <div class="text-center" >
+    <a href="OSPbyUM-PrijaviSe.html" class="btn btn-lg" id="naslovA" title="reload" >
+        <h1 >
             <span class="naslov">OSP</span>byUM</h1>
     </a>
+</div>
     <div id="formaLogInSve">
         <form action="?" method="POST" id="formaLogIn">
             <label for="emailLog" id="lable">email</label>
@@ -27,12 +31,14 @@
             <input type="password" name="passLog" id="passLog" placeholder="password" required>
             <br>
             <br>
-            <input type="submit" value="Prijavi se" id="dugmePrijaviSe">
+            <input type="submit" value="Prijavi se" id="dugmePrijaviSe" class="btn  btn-lg">
             <br>
             <br>
-            <input type="button" value="Registruj se" id="dugmeRegistujSe">
+            <input type="button" value="Registruj se" id="dugmeRegistujSe" class="btn  btn-lg">
         </form>
-        <a href="#" id="dugmeZaboravljenaSifra">Zaboravio sam šifru</a>
+        <div class="text-center" >
+        <a href="#" id="dugmeZaboravljenaSifra" class="btn  btn-lg"   >Zaboravio sam šifru</a>
+    </div>
     </div>
     <div id="citatiRandom"></div>
 
@@ -50,7 +56,7 @@
             <input type="text" name="odgovor" id="odgovor" placeholder="Šifra iz firme">
             <br>
             <br>
-            <input type="submit" value="Potvrdi" id="dugmePotvrdiProveru">
+            <input type="submit" value="Potvrdi" id="dugmePotvrdiProveru" class="btn btn-lg">
             <div id="prikazZaboravljeneSifre">
                 <h1 id="pokaziSifru"></h1>
             </div>
@@ -109,10 +115,10 @@
             <input type="text" name="sifraFirmeRegistarcija" id="sifraFirmeRegistarcija" placeholder="Šifra iz firme" required>
             <br>
             <br>
-            <button type="submit" id="registujSe" value="Registuj se">Registuj se</button>
+            <input type="submit" id="registujSe" class="btn btn-lg" value="Registuj se">
         </form>
     </div>
-
+</div>
 
     <script src="OSPjsFajlovi/OSPbyUMPrijavaRegistracija.js"></script>
     <script src="OSPjsFajlovi/citatiRandom.js"></script>

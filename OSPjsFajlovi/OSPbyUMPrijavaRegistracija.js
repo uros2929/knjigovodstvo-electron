@@ -27,8 +27,9 @@ function removeFromLocalStorage(key) {
 function prikaziFormuZaRegistrovanje() {
     dugmeRegistujSe.addEventListener("click", (event) => {
         event.preventDefault();
-        hide(formaLogInSve)
-        show(formaRegistrujSe)
+        hide(formaLogInSve);
+        hide(divZaCitat);
+        show(formaRegistrujSe);
     })
 }
 function prkaziFormuZaZaboravljenuSifru() {

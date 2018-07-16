@@ -1,4 +1,4 @@
-*html{ box-sizing:border-box; }
+*html{ box-sizing:content-box; }
 * , *:before, *:after{ box-sizing:inherit; }
 #formaRegistrujSe,#formaZaboravljenaSifra{
     display: none;
@@ -7,22 +7,12 @@ body{
     background-color: rgb(30, 34, 34);
 }
 
-.naslovA{
-    width: 20%;
-    text-align: center;
-  
-}
-.naslovA{
+#naslovA{
     color: white;
     text-decoration-line: none;
 }
-.naslovA>h1{
-    margin-bottom: 2%;
-    position: relative;
-    margin-top: -3%;
+#naslovA>h1{
     font-size: 50px;
-    width: 20%;
-    margin-left: 40%;
 }
 span.naslov{
     color: rgb(255,85,0);
@@ -45,8 +35,8 @@ span.naslov{
 #emailLog,#passLog{
     border-color: rgb(255, 85, 0);
     text-align: center;
-    width: 40%;
-    height: 35px;
+    width: 50%;
+    height: 40px;
     margin-top: 5%;
     font-size: 24px;
 }
@@ -58,14 +48,10 @@ span.naslov{
     top: 20px;
 }
 #dugmePrijaviSe,#dugmeRegistujSe{
-    width: 25%;
-    height: 35px; 
     cursor: pointer;  
     background-color: rgb(30, 34, 34);
     border-color:  rgb(30, 34, 34);
     color: white;
-    margin-top: 3%;
-    font-size: 24px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
@@ -75,16 +61,10 @@ span.naslov{
 }
 #dugmeZaboravljenaSifra{
     border: solid 1px rgb(26, 26, 29);
-    display: block;
     text-decoration: none;
     color: white; 
-    width: 15%;
-    height: 35px;
     background-color: rgb(255, 85, 0);
-    text-align: center;
-    position: relative;
-    left: 42.5%;
-    font-size: 24px;
+   
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
@@ -97,9 +77,8 @@ span.naslov{
 
 #formaRegistrujSeSve{
     list-style: none;
-    width: 40%;
+    width: 55%;
     margin: 20px auto;
-    padding: 0;
     text-align: center;
     background-color: rgb(63, 63, 66);
 }
@@ -109,13 +88,10 @@ font-weight: 700;
 font-size: 24px;
 }
 #registujSe{
-    width: 25%;
-    height: 35px; 
     cursor: pointer;  
     background-color: rgb(30, 34, 34);
     border-color:  rgb(30, 34, 34);
     color: white;
-    font-size: 24px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
@@ -126,14 +102,14 @@ font-size: 24px;
 #imeRegistracija,#prezimeRegistracija,#emailRegistracija,#firmaRegistracija,#passwordRegistracija,#potvrdiPasswordRegistracija,#sifraFirmeRegistarcija{
     border-color: rgb(255, 85, 0);
     text-align: center;
-    width: 30%;
-    height: 30px;  
+    width: 50%;
+    height: 40px;  
     font-size: 24px;
 }
 /*Zaboravljena sifra forma*/
 #formaZaboravljenaSifra{
     list-style: none;
-    width: 40%;
+    width: 55%;
     margin: 10% auto;
     padding: 0;
     text-align: center;  
@@ -143,16 +119,12 @@ font-size: 24px;
 #UkucajSifruIzFirme,#ukucajEmail{
     color: white;
     font-weight: 700;
-    font-size: 24px;  
+    font-size: 24px;
 }
 #dugmePotvrdiProveru{
-    width: 25%;
-    height: 35px; 
-    cursor: pointer;  
     background-color: rgb(30, 34, 34);
     border-color:  rgb(30, 34, 34);
     color: white;
-    font-size: 24px; 
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
@@ -165,13 +137,13 @@ font-size: 24px;
     font-weight: 600;
     font-size: 24px; 
     position: relative;
-   bottom: 240px;
+    top: 20px;
 }
 #odgovorEmail,#odgovor{
     border-color: rgb(255, 85, 0);
     text-align: center;
-    width: 30%;
-    height: 30px; 
+    width: 50%;
+    height: 40px; 
     font-size: 24px;
 }
 #citatiRandom{
@@ -188,10 +160,6 @@ font-size: 24px;
 background-color: rgb(26,26,29);
 border-color: rgb(63, 63, 66);
 color: white;
-margin: 1% 1% 1% 0%;
-width: 10%;
-font-size: 24px;
-font-weight: 500;
 -webkit-transition-duration: 0.4s; 
 transition-duration: 0.4s;
 }
