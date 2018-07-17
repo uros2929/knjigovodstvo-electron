@@ -66,7 +66,8 @@ function osveziDugme() {
         tekstKreiranogDokumenta = document.getElementById('tekstKreiranogDokumenta');
         dugmeOsveziKreiranjeDokumenata.addEventListener('click',(event)=>{
             event.preventDefault();
-            tekstKreiranogDokumenta.value="";
+            location.reload();
+            //tekstKreiranogDokumenta.value="";
         })
         
 }
