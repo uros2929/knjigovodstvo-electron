@@ -2,10 +2,10 @@ let satDiv = document.getElementById("sat");
 let datumDiv = document.getElementById("datumDiv");
 function sat() {
     let time = new Date(),
-        hours = time.getHours(),
-        minutes = time.getMinutes(),
-        seconds = time.getSeconds();
-    satDiv.innerHTML = proveriVreme(hours) + ":" + proveriVreme(minutes) + ":" + proveriVreme(seconds)
+        sati = time.getHours(),
+        minuti = time.getMinutes(),
+        sekunde = time.getSeconds();
+    satDiv.innerHTML = proveriVreme(sati) + ":" + proveriVreme(minuti) + ":" + proveriVreme(sekunde)
 }
 setInterval(sat, 1000);
 function proveriVreme(vreme) {
