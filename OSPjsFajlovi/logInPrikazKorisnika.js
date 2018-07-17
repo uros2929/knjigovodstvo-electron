@@ -6,12 +6,12 @@ function prikaziPodatkeKorisnika() {
     PodatciUlogovanogKorisnika.innerHTML = getFromLocalStorage("Ulogovani korisnik");
 }
 prikaziPodatkeKorisnika();
-let odjaviSeDugme=document.getElementById("logoutDugme");
+let odjaviSeDugme = document.getElementById("logoutDugme");
 function odjaviSe() {
-    odjaviSeDugme.addEventListener("click",(event)=>{
+    odjaviSeDugme.addEventListener("click", (event) => {
         event.preventDefault();
-        localStorage.removeItem("Ulogovani korisnik");  
-        location.href="OSPbyUM-PrijaviSe.html";
+        localStorage.removeItem("Ulogovani korisnik");
+        location.href = "OSPbyUM-PrijaviSe.html";
     })
 }
 odjaviSe();

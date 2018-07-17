@@ -8,12 +8,12 @@ function prikaziModalAnalitikaRacuna() {
     modalAnalitikaRacuna.style.display = 'none'
     if (modalAnalitikaRacuna.style.display == "none") {
         modalAnalitikaRacuna.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }
 function skloniModalAnalitikaRacuna() {
     if (modalAnalitikaRacuna.style.display == "block") {
         modalAnalitikaRacuna.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }

@@ -5,13 +5,13 @@ function prikaziModalDigitron() {
     modalDigitron.style.display = 'none'
     if (modalDigitron.style.display == "none") {
         modalDigitron.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }
 function skloniModalDigitron() {
     if (modalDigitron.style.display == "block") {
         modalDigitron.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }
 
@@ -55,13 +55,19 @@ function izbrisiPrikazaneBrojeve() {
 }
 
 function racunanje() {
-    let rezultat = prikazIskucanihBrojeva.value;
     jednako.addEventListener('click', (event) => {
         event.preventDefault();
-       return prikazIskucanihBrojeva.value=eval(rezultat); // eval radi sa stringovima, probao i sa JSON.stringify. pobrljavi ! xD
+        let novRezultat = "n/a";
+        try {
+            novRezultat = eval(prikazIskucanihBrojeva.value)
+        } catch (error) {
+            
+        }
+        if (novRezultat !== "n/a") {
+            prikazIskucanihBrojeva.value = novRezultat;
+        }
     })
-    
-} 
+}
 
 
 

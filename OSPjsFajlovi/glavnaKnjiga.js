@@ -7,12 +7,12 @@ function prikaziModalGlavnaKnjiga() {
     modalGlavnaKnjiga.style.display = 'none'
     if (modalGlavnaKnjiga.style.display == "none") {
         modalGlavnaKnjiga.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }
 function skloniModalGlavnaKnjiga() {
     if (modalGlavnaKnjiga.style.display == "block") {
         modalGlavnaKnjiga.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik","dugmeKalendar","dugmeKontakt");
+        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
     }
 }

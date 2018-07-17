@@ -90,21 +90,21 @@ function ulogujSeNaStranicu() {
 function zaboravljenaSifra() {
     formaZaboravljenaSifra.addEventListener("submit", (event => {
         event.preventDefault();
-        let  korisnici = localStorage.getItem("Korisnici") !== null ? getFromLocalStorage("Korisnici") : {},
+        let korisnici = localStorage.getItem("Korisnici") !== null ? getFromLocalStorage("Korisnici") : {},
             email = document.getElementById("odgovorEmail").value,
             sifraFirmeOdgovor = document.getElementById("odgovor").value,
-            pokaziSifru=document.getElementById("pokaziSifru"),
-            divPrikazZaboravljenjeSifre=document.getElementById("prikazZaboravljeneSifre");
+            pokaziSifru = document.getElementById("pokaziSifru"),
+            divPrikazZaboravljenjeSifre = document.getElementById("prikazZaboravljeneSifre");
 
-        if (korisnici[email].sifraFirmeKorisnika !== sifraFirmeOdgovor ) {
+        if (korisnici[email].sifraFirmeKorisnika !== sifraFirmeOdgovor) {
             alert("Uneli ste pogresnu sifru iz firme!")
             location.reload();
 
         } else {
-            pokaziSifru.innerHTML="Vaša šifra je:  "+korisnici[email].passwordKorisnika+"<br><br>"+"Za 5 sekundi vratićemo vas na početnu stranicu";
-            divPrikazZaboravljenjeSifre.style="border: 2px rgb(255,85,0) solid;background-color: rgb(63,63,66);"
+            pokaziSifru.innerHTML = "Vaša šifra je:  " + korisnici[email].passwordKorisnika + "<br><br>" + "Za 5 sekundi vratićemo vas na početnu stranicu";
+            divPrikazZaboravljenjeSifre.style = "border: 2px rgb(255,85,0) solid;background-color: rgb(63,63,66);"
             setTimeout(() => {
-              location.reload();
+                location.reload();
             }, 5000);
         }
 

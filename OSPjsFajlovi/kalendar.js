@@ -122,23 +122,23 @@ function textAreaKalendaraCuvanjePrikaz(klikZaPrikazTArea, dugme) {
         event.preventDefault();
         textAreaKalendara.innerHTML = `<textarea rows="12" id='textArea${dugme}' style='display:block;resize: none'>Upisi Obaveze</textarea>`;
         textAreaKalendara.innerHTML += `<button id="sacuvajPodatkeTextA${dugme}">Sačuvaj</button>`;
-        let TAstavke=localStorage.getItem("textAreaSacuvaniTekst");
-        if (TAstavke=== null) {
+        let TAstavke = localStorage.getItem("textAreaSacuvaniTekst");
+        if (TAstavke === null) {
             for (let dugmeA = 1; dugmeA <= 12; dugmeA++) {
                 let kljucKlasaTekstaVrednost = `textArea${dugmeA}`;
-            TAlocalStorage[kljucKlasaTekstaVrednost] = "Upisi obaveze !";
-            setToLocalStorage(`textAreaSacuvaniTekst`, TAlocalStorage);  
-                
+                TAlocalStorage[kljucKlasaTekstaVrednost] = "Upisi obaveze !";
+                setToLocalStorage(`textAreaSacuvaniTekst`, TAlocalStorage);
+
             }
-         
-        }else{
-            TAlocalStorage=JSON.parse(TAstavke);
+
+        } else {
+            TAlocalStorage = JSON.parse(TAstavke);
         }
-            let kljucTA = `textArea${dugme}`;
-            textAreaKalendara.innerHTML = `<textarea rows="12" id='textArea${dugme}' style='display:block;resize: none'>${TAlocalStorage[kljucTA]}</textarea>`;
-            textAreaKalendara.innerHTML += `<button id="sacuvajPodatkeTextA${dugme}">Sačuvaj</button>`
-          
-       
+        let kljucTA = `textArea${dugme}`;
+        textAreaKalendara.innerHTML = `<textarea rows="12" id='textArea${dugme}' style='display:block;resize: none'>${TAlocalStorage[kljucTA]}</textarea>`;
+        textAreaKalendara.innerHTML += `<button id="sacuvajPodatkeTextA${dugme}">Sačuvaj</button>`
+
+
         let sacuvajPodatkeTextA = document.getElementById(`sacuvajPodatkeTextA${dugme}`);
         sacuvajPodatkeTextA.addEventListener("click", (event) => {
             event.preventDefault();
@@ -146,6 +146,7 @@ function textAreaKalendaraCuvanjePrikaz(klikZaPrikazTArea, dugme) {
             let kljucKlasaTekstaVrednost = `textArea${dugme}`;
             TAlocalStorage[kljucKlasaTekstaVrednost] = klasaTekstaVrednost;
             setToLocalStorage(`textAreaSacuvaniTekst`, TAlocalStorage);
+            alert('Uspešno sačuvani podaci !');
 
         })
         klikZaPrikazTArea.addEventListener("dblclick", (event) => {
@@ -154,7 +155,7 @@ function textAreaKalendaraCuvanjePrikaz(klikZaPrikazTArea, dugme) {
             klasaTeksta.style.display = "none";
 
         })
-      
+
     })
 }
 textAreaKalendaraCuvanjePrikaz(januarDugme, "1"); textAreaKalendaraCuvanjePrikaz(februarDugme, "2"); textAreaKalendaraCuvanjePrikaz(martDugme, "3"); textAreaKalendaraCuvanjePrikaz(aprilDugme, "4"); textAreaKalendaraCuvanjePrikaz(majDugme, "5"); textAreaKalendaraCuvanjePrikaz(junDugme, "6"); textAreaKalendaraCuvanjePrikaz(julDugme, "7"); textAreaKalendaraCuvanjePrikaz(avgustDugme, "8"); textAreaKalendaraCuvanjePrikaz(septembarDugme, "9"); textAreaKalendaraCuvanjePrikaz(oktobarDugme, "10"); textAreaKalendaraCuvanjePrikaz(novembarDugme, "11"); textAreaKalendaraCuvanjePrikaz(decembarDugme, "12");
