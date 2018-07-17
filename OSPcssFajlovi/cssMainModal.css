@@ -36,6 +36,8 @@ header{
     position: relative;
     top: 40px;
     font-size: 50px;
+    width: 20%;
+    margin: 0 auto;
 }
 .naslov>a{
     color: white;
