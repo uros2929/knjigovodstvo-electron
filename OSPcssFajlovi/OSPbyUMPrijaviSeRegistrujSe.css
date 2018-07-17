@@ -131,7 +131,7 @@ font-size: 24px;
     padding: 0;
     text-align: center;  
     background-color: rgb(63, 63, 66);
-    box-shadow: 5px 1px 81px 37px rgba(72,181,140,0.25); /*https://html-css-js.com/css/generator/box-shadow/*/
+    box-shadow: 5px 1px 81px 37px rgba(72,181,140,0.25);  /*https://html-css-js.com/css/generator/box-shadow/*/
   
 }
 #UkucajSifruIzFirme,#ukucajEmail{
