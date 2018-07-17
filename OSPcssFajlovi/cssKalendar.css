@@ -90,6 +90,8 @@
     display: none;
     background-color: rgb(58, 58, 58);
     border-color: red;
+    -webkit-animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 }
 #textAreaKalendara{
     width: 100%;
@@ -109,6 +111,8 @@
     font-size: 24px;
     font-weight: 500;
     height: 182px;
+    -webkit-animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 
 }
 #textAreaKalendara button{

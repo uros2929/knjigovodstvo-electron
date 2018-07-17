@@ -96,18 +96,6 @@ aside>button:hover{
     border-color: rgb(255, 85, 0);
 
 }
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-
 #citatiRandom{
     display: block;
     width: 90%;
