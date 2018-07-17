@@ -35,6 +35,10 @@ function sacuvajProizvodULocalStorage() {
             alert('Naziv proizvoda je obavezan !')
             return;
         }
+        if (proizvodi[sifraProizvoda] !== undefined) {
+            alert("Već postojeća šifra proizvoda !")
+            return;
+        }
         let noviProizvodi = {
             sifra: sifraProizvoda,
             naziv: nazivProizvoda,
