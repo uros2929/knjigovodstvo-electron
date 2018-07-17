@@ -33,7 +33,15 @@ span.naslov{
     margin-top: 1%;
 }
 #emailLog,#passLog{
-    border-color: rgb(255, 85, 0);
+    border:solid 3px rgb(72,181,140);
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    margin-top: 5%;
+    font-size: 24px;
+}
+#emailLog:placeholder-shown,#passLog:placeholder-shown{
+    border:solid 3px rgb(255, 85, 0);
     text-align: center;
     width: 50%;
     height: 40px;
@@ -100,7 +108,14 @@ font-size: 24px;
     border-color: rgb(255, 85, 0);
 }
 #imeRegistracija,#prezimeRegistracija,#emailRegistracija,#firmaRegistracija,#passwordRegistracija,#potvrdiPasswordRegistracija,#sifraFirmeRegistarcija{
-    border-color: rgb(255, 85, 0);
+    border:solid 3px rgb(72,181,140);
+    text-align: center;
+    width: 50%;
+    height: 40px;  
+    font-size: 24px;
+}
+#imeRegistracija:placeholder-shown,#prezimeRegistracija:placeholder-shown,#emailRegistracija:placeholder-shown,#firmaRegistracija:placeholder-shown,#passwordRegistracija:placeholder-shown,#potvrdiPasswordRegistracija:placeholder-shown,#sifraFirmeRegistarcija:placeholder-shown{
+    border:solid 3px rgb(255, 85, 0);
     text-align: center;
     width: 50%;
     height: 40px;  
@@ -140,7 +155,14 @@ font-size: 24px;
     top: 20px;
 }
 #odgovorEmail,#odgovor{
-    border-color: rgb(255, 85, 0);
+    border:solid 3px rgb(72,181,140);
+    text-align: center;
+    width: 50%;
+    height: 40px; 
+    font-size: 24px;
+}
+#odgovorEmail:placeholder-shown,#odgovor:placeholder-shown{
+    border:solid 3px rgb(255, 85, 0);
     text-align: center;
     width: 50%;
     height: 40px; 
