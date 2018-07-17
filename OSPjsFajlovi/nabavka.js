@@ -1,20 +1,8 @@
-let modalNabavka = document.getElementById("modalNabavka");
-document.getElementById("dugmeNabavka").addEventListener('click', prikaziModalNabavka);
-document.getElementById("dugmeIzadjiIzNabavka").addEventListener('click', skloniModalNabavka);
-function prikaziModalNabavka() {
-    modalNabavka.style.display = 'none'
-    if (modalNabavka.style.display == "none") {
-        modalNabavka.style.display = "block";
-
-        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
-function skloniModalNabavka() {
-    if (modalNabavka.style.display == "block") {
-        modalNabavka.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
+let modalNabavka = document.getElementById("modalNabavka"),
+    dugmeNabavka = document.getElementById("dugmeNabavka"),
+    dugmeIzadjiIzNabavka = document.getElementById("dugmeIzadjiIzNabavka");
+prikaziModalMain(dugmeNabavka, modalNabavka)
+skloniModalMain(dugmeIzadjiIzNabavka, modalNabavka)
 
 let dobavljaci = {};
 let ispisEmailaDobavljaca = document.getElementById("ispisEmailaDobavljaca");

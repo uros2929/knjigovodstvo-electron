@@ -1,24 +1,8 @@
-let modalKreiranjeDokumenata = document.getElementById("modalKreiranjeDokumenata");
-document.getElementById("dugmeKreiranjeDokumenata").addEventListener('click', prikaziModalKreiranjeDokumenata);
-document.getElementById("dugmeIzadjiIzKreiranjeDokumenata").addEventListener('click', skloniModalKreiranjeDokumenata);
-
-
-
-function prikaziModalKreiranjeDokumenata() {
-    modalKreiranjeDokumenata.style.display = 'none'
-    if (modalKreiranjeDokumenata.style.display == "none") {
-        modalKreiranjeDokumenata.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
-function skloniModalKreiranjeDokumenata() {
-    if (modalKreiranjeDokumenata.style.display == "block") {
-        modalKreiranjeDokumenata.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-        location.reload();
-    }
-}
-
+let modalKreiranjeDokumenata = document.getElementById("modalKreiranjeDokumenata"),
+    dugmeKreiranjeDokumenata = document.getElementById("dugmeKreiranjeDokumenata"),
+    dugmeIzadjiIzKreiranjeDokumenata = document.getElementById("dugmeIzadjiIzKreiranjeDokumenata");
+prikaziModalMain(dugmeKreiranjeDokumenata, modalKreiranjeDokumenata)
+skloniModalMain(dugmeIzadjiIzKreiranjeDokumenata, modalKreiranjeDokumenata)
 let sistemDokumenata = require('fs'),
     dugmeSacuvajDokument = document.getElementById('sacuvajDokument');
 function cuvanjeDokumenta() {
@@ -77,4 +61,14 @@ function readFile(filepath) {
     let tekstKreiranogDokumentaCitanje = document.getElementById('tekstKreiranogDokumenta');
     tekstKreiranogDokumentaCitanje.innerHTML = fileIspis;
 }
+function osveziDugme() {
+    let dugmeOsveziKreiranjeDokumenata = document.getElementById('dugmeOsveziKreiranjeDokumenata'),
+        tekstKreiranogDokumenta = document.getElementById('tekstKreiranogDokumenta');
+        dugmeOsveziKreiranjeDokumenata.addEventListener('click',(event)=>{
+            event.preventDefault();
+            tekstKreiranogDokumenta.value="";
+        })
+        
+}
+osveziDugme();
 

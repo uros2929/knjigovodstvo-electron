@@ -1,19 +1,8 @@
-let modalDigitron = document.getElementById("modalDigitron");
-document.getElementById("dugmeDigitron").addEventListener('click', prikaziModalDigitron);
-document.getElementById("dugmeIzadjiIzDigitrona").addEventListener('click', skloniModalDigitron);
-function prikaziModalDigitron() {
-    modalDigitron.style.display = 'none'
-    if (modalDigitron.style.display == "none") {
-        modalDigitron.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
-function skloniModalDigitron() {
-    if (modalDigitron.style.display == "block") {
-        modalDigitron.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
+let modalDigitron = document.getElementById("modalDigitron"),
+    dugmeDigitron = document.getElementById("dugmeDigitron"),
+    dugmeIzadjiIzDigitrona = document.getElementById("dugmeIzadjiIzDigitrona");
+prikaziModalMain(dugmeDigitron, modalDigitron);
+skloniModalMain(dugmeIzadjiIzDigitrona, modalDigitron);
 
 let prikazIskucanihBrojeva = document.getElementById("prikazIskucanihBrojeva"),
     reset = document.getElementById("reset"),
@@ -61,7 +50,7 @@ function racunanje() {
         try {
             novRezultat = eval(prikazIskucanihBrojeva.value)
         } catch (error) {
-            
+
         }
         if (novRezultat !== "n/a") {
             prikazIskucanihBrojeva.value = novRezultat;

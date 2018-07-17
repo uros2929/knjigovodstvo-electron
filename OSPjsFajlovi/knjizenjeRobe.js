@@ -1,21 +1,8 @@
-let modalKnjizenjeRobe = document.getElementById("modalKnjizenjeRobe");
-document.getElementById("dugmeKnjizenjeRobe").addEventListener('click', prikaziModalKnjizenjeRobe);
-document.getElementById("dugmeIzadjiIzKnjizenjeRobe").addEventListener('click', skloniModalKnjizenjeRobe);
-
-
-function prikaziModalKnjizenjeRobe() {
-    modalKnjizenjeRobe.style.display = 'none'
-    if (modalKnjizenjeRobe.style.display == "none") {
-        modalKnjizenjeRobe.style.display = "block";
-        blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
-function skloniModalKnjizenjeRobe() {
-    if (modalKnjizenjeRobe.style.display == "block") {
-        modalKnjizenjeRobe.style.display = "none";
-        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
-    }
-}
+let modalKnjizenjeRobe = document.getElementById("modalKnjizenjeRobe"),
+    dugmeKnjizenjeRobe = document.getElementById("dugmeKnjizenjeRobe"),
+    dugmeIzadjiIzKnjizenjeRobe = document.getElementById("dugmeIzadjiIzKnjizenjeRobe");
+prikaziModalMain(dugmeKnjizenjeRobe, modalKnjizenjeRobe)
+skloniModalMain(dugmeIzadjiIzKnjizenjeRobe, modalKnjizenjeRobe)
 let dugmeDodajProizvod = document.getElementById('dugmeDodajProizvod');
 proizvodi = {};
 function sacuvajProizvodULocalStorage() {

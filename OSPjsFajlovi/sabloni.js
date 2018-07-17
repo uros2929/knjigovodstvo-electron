@@ -25,3 +25,24 @@ function odBlokirajDugmice(...dugme) {
         document.getElementById(id).disabled = false;
     }
 }
+function prikaziModalMain(dugme, modal) {
+    dugme.addEventListener('click', (event) => {
+        event.preventDefault();
+        modal.style.display = 'none'
+        if (modal.style.display == "none") {
+            modal.style.display = "block";
+            blokiranjeDugmica("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
+        }
+    })
+
+}
+function skloniModalMain(dugme, modal) {
+    dugme.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (modal.style.display == "block") {
+            modal.style.display = "none";
+            odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
+        }
+    })
+}
+
