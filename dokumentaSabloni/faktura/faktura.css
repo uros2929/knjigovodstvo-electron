@@ -64,8 +64,12 @@ h3{
 table {
     border-collapse: collapse;
 }
+.tabelaKolicinaH{width: 8%;text-align: center; border: 2px solid black;}
+.tabelaCenaH{width: 20%;text-align: center; border: 2px solid black;}
+.opisInputH{width: 98%;text-align: center; border: 2px solid black;}
+.tabelaOpisH{width:50%;text-align: center; border: 2px solid black;}
+.tabelaBR{border: 2px solid black;}
 table, th, td {
     border: 1px solid black;
 }
-.tabelaOpis{width:50%;}.tabelaKolicina{width: 8%;}.tabelaCena{width: 20%;}.opisInput{width: 98%};
-
+.tabelaOpis{width:50%;}.tabelaKolicina{width: 8%;}.tabelaCena{width: 20%;}.opisInput{width: 98%;};
