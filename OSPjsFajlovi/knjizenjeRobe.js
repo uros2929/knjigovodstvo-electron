@@ -50,7 +50,6 @@ function prikazSacuvanihProizvoda() {
         proizvodi = {}
     } else {
         proizvodi = JSON.parse(robaIzLocalStorage);
-        console.log(proizvodi);
     }
     let knjizenjeRobeStavkeHTML = '<ul id="lista">';
     for (let kljucKnjizenjeRobe in proizvodi) {

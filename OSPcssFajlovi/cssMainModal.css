@@ -24,8 +24,14 @@ header{
     left: 95px;
 
 } 
-#PodatciUlogovanogKorisnika>h4{
-    font-weight: 700;
+#PodatciUlogovanogKorisnikaImeiPrezime{
+    color: white;
+    position: relative;
+    float: right;
+    top: 27px;
+    font-size: 35px;
+    left: 24%;
+    height: 0;
 }
 .naslov{
     margin: auto;  
