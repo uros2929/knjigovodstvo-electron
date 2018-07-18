@@ -2,7 +2,14 @@ let modalKreiranjeDokumenata = document.getElementById("modalKreiranjeDokumenata
     dugmeKreiranjeDokumenata = document.getElementById("dugmeKreiranjeDokumenata"),
     dugmeIzadjiIzKreiranjeDokumenata = document.getElementById("dugmeIzadjiIzKreiranjeDokumenata");
 prikaziModalMain(dugmeKreiranjeDokumenata, modalKreiranjeDokumenata)
-skloniModalMain(dugmeIzadjiIzKreiranjeDokumenata, modalKreiranjeDokumenata)
+dugmeIzadjiIzKreiranjeDokumenata.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (modalKreiranjeDokumenata.style.display == "block") {
+        modalKreiranjeDokumenata.style.display = "none";
+        odBlokirajDugmice("dugmeRokovnik", "dugmeKalendar", "dugmeKontakt");
+        location.reload();
+    }
+})
 let sistemDokumenata = require('fs'),
     dugmeSacuvajDokument = document.getElementById('sacuvajDokument');
 function cuvanjeDokumenta() {
@@ -61,15 +68,5 @@ function readFile(filepath) {
     let tekstKreiranogDokumentaCitanje = document.getElementById('tekstKreiranogDokumenta');
     tekstKreiranogDokumentaCitanje.innerHTML = fileIspis;
 }
-function osveziDugme() {
-    let dugmeOsveziKreiranjeDokumenata = document.getElementById('dugmeOsveziKreiranjeDokumenata'),
-        tekstKreiranogDokumenta = document.getElementById('tekstKreiranogDokumenta');
-        dugmeOsveziKreiranjeDokumenata.addEventListener('click',(event)=>{
-            event.preventDefault();
-            location.reload();
-            //tekstKreiranogDokumenta.value="";
-        })
-        
-}
-osveziDugme();
+
 
