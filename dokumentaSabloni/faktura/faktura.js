@@ -3,7 +3,9 @@ let tabelaBody = document.getElementById("tabelaFakture"),
 dugmeDodajRed = document.getElementById("dugmeDodajRed"),
 dugmeResetujFakturu = document.getElementById("resetujFakturu"),
 dugmeStampajFakturu = document.getElementById("stampajFakturu"),
-dugmeSacuvajFakturu = document.getElementById("sacuvajFakturu");
+dugmeSacuvajFakturu = document.getElementById("sacuvajFakturu"),
+izbrisiRedDugme = document.getElementById('izbrisiRed'),
+brojReda = document.getElementById('brojReda');
 
 function headerTabele() {
 header = tabelaBody.createTHead();
@@ -54,6 +56,16 @@ dugmeDodajRed.addEventListener('click', (event) => {
 })
 }
 pravljenjeRedovaTabele();
+
+izbrisiRedDugme.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (brojReda.value==="") {
+        alert('Upiši broj reda koji želiš da izbrišeš !')
+        return;
+    }
+    tabelaBody.deleteRow(brojReda.value);
+        })
+    
 
 dugmeResetujFakturu.addEventListener("click", (event) => {
 event.preventDefault();
