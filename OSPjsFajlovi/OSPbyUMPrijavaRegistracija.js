@@ -9,21 +9,6 @@ prkaziFormuZaZaboravljenuSifru();
 postaviPodatkeKorisnikaULocal();
 ulogujSeNaStranicu();
 zaboravljenaSifra();
-function show(element) {
-    element.style.display = "block"
-}
-function hide(element) {
-    element.style.display = "none"
-}
-function setToLocalStorage(key, obj) {
-    localStorage.setItem(key, JSON.stringify(obj));
-}
-function getFromLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key));
-}
-function removeFromLocalStorage(key) {
-    localStorage.removeItem(key);
-}
 function prikaziFormuZaRegistrovanje() {
     dugmeRegistujSe.addEventListener("click", (event) => {
         event.preventDefault();
@@ -52,6 +37,10 @@ function postaviPodatkeKorisnikaULocal() {
             korisnici = localStorage.getItem("Korisnici") !== null ? JSON.parse(localStorage.getItem("Korisnici")) : {};
         if (password !== potvrdiPassword) {
             alert("Potvrda šifre nije ispravna")
+            return;
+        }
+        if (korisnici[email]!==undefined) {
+            alert('Korisnik sa datom email adresom već postoji ! ');
             return;
         }
         let noviKorisnik = {
