@@ -19,6 +19,34 @@ body{
     width: 18%; 
     font-size: 16px; 
 }
+#sacuvaneFakture{
+    border: solid 2px white; 
+    position: absolute;
+    width: 20%;
+    margin-left: 2%;
+    min-height: 14.8cm;
+    overflow-y: scroll;
+    background-color: rgb(63,63,66);
+}
+
+#listaFakture li{
+    color: white;
+    font-size: 24px;
+    margin-top: 3%;
+    cursor: pointer;
+}
+#listaFakture li em{
+   position: relative;
+   float: right;
+   margin-right: 5%;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    border-radius: 25%;
+}
+#listaFakture li em:hover{
+   color: red;
+   border-color: red;
+}
 #fakturaA4{
     height:29.7cm;
     width:21cm;

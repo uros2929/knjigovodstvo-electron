@@ -71,6 +71,7 @@ function izbrisiProizvod(event) {
         delete robaIzLocalStorage[kljucSacuvanogProizvoda]
         localStorage.setItem('knjizenjeProizvoda', JSON.stringify(robaIzLocalStorage));
         prikazSacuvanihProizvoda();
+        alert('Proizvod uspešno obrisan !');
     }
 }
 function izmeniProizvod(event) {
