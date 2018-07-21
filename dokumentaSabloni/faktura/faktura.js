@@ -40,16 +40,16 @@ function pravljenjeRedovaTabele() {
         celija1.classList.add('broj');
         broj++;
         celija2 = red.insertCell(1);
-        celija2.innerHTML = "<input type='number' placeholder='Količina'>";
+        celija2.innerHTML = `<input type='number' placeholder='Količina' id='kolicina${broj}'>` ;
         celija2.classList.add('tabelaKolicina');
         celija3 = red.insertCell(2);
-        celija3.innerHTML = "<input type='text' class='opisInput' placeholder='Unesite opis'>";
+        celija3.innerHTML = `<input type='text' class='opisInput' placeholder='Unesite opis' id='opis${broj}'>`;
         celija3.classList.add('tabelaOpis');
         celija4 = red.insertCell(3);
-        celija4.innerHTML = "<input type='text' placeholder='Unesite cenu'>";
+        celija4.innerHTML = `<input type='text' placeholder='Unesite cenu' id='cena${broj}'>`;
         celija4.classList.add('tabelaCena');
         celija5 = red.insertCell(4);
-        celija5.innerHTML = "<input type='text' placeholder='Unesite ukupan iznos'>";
+        celija5.innerHTML = `<input type='text' placeholder='Unesite ukupan iznos' id='ukupanIznos${broj}'>`;
         celija5.classList.add('tabelaCena');
         if (broj === 22) {
             alert("Uneli ste maksimalan broj artikala!");
@@ -99,6 +99,9 @@ function sacuvajFakturu() {
             medjuvrednosti = document.getElementById('medjuvrednosti').value,
             porezNaPromet = document.getElementById('porezNaPromet').value,
             ukupnoDugovanje = document.getElementById('ukupnoDugovanje').value,
+
+            kolicina1=document.getElementById('kolicina2').value,
+            
             fakture = localStorage.getItem("fakture") !== null ? JSON.parse(localStorage.getItem("fakture")) : {};
         if (fakturaBroj === "") {
             alert('Broj fakture je obavezan !')
@@ -132,7 +135,9 @@ function sacuvajFakturu() {
             telefonPrimaocaN: telefonPrimaoca,
             medjuvrednostiN: medjuvrednosti,
             porezNaPrometN: porezNaPromet,
-            ukupnoDugovanjeN: ukupnoDugovanje
+            ukupnoDugovanjeN: ukupnoDugovanje,
+
+            kolicina1N:kolicina1
         }
         fakture[fakturaBroj] = novaFaktura;
         localStorage.setItem("fakture", JSON.stringify(fakture));
@@ -146,7 +151,6 @@ function sacuvajFakturu() {
     })
 }
 sacuvajFakturu();
-
 function prikazSacuvanihFaktura() {
     let sacuvaneFakture = document.getElementById('sacuvaneFakture'),
         sacuvaneFaktureIzLocala = localStorage.getItem('fakture');
@@ -194,8 +198,28 @@ function izmeniFakturu(event) {
         telefonPrimaocaIzvucen = izvuceneFakture.telefonPrimaocaN,
         medjuvrednostiIzvucena = izvuceneFakture.medjuvrednostiN,
         porezNaPrometIzvucen = izvuceneFakture.porezNaPrometN,
-        ukupnoDugovanjeIzvuceno = izvuceneFakture.ukupnoDugovanjeN;
+        ukupnoDugovanjeIzvuceno = izvuceneFakture.ukupnoDugovanjeN,
 
+        kolicina1NIzvuceno=izvuceneFakture.kolicina1N;
+
+        for (let broj = 1; broj < 22; broj++) {
+            red = tabelaBody.insertRow(broj);
+            celija1 = red.insertCell(0);
+            celija1.innerHTML = `${broj}`;
+            celija1.classList.add('broj');
+            celija2 = red.insertCell(1);
+            celija2.innerHTML = `<input type='number' placeholder='Količina' id='kolicina${broj}'>` ;
+            celija2.classList.add('tabelaKolicina');
+            celija3 = red.insertCell(2);
+            celija3.innerHTML = `<input type='text' class='opisInput' placeholder='Unesite opis' id='opis${broj}'>`;
+            celija3.classList.add('tabelaOpis');
+            celija4 = red.insertCell(3);
+            celija4.innerHTML = `<input type='text' placeholder='Unesite cenu' id='cena${broj}'>`;
+            celija4.classList.add('tabelaCena');
+            celija5 = red.insertCell(4);
+            celija5.innerHTML = `<input type='text' placeholder='Unesite ukupan iznos' id='ukupanIznos${broj}'>`;
+            celija5.classList.add('tabelaCena');
+        }
     document.getElementById('fakturaBroj').value = fakturaBrojIzvucena;
     document.getElementById('datum').value = datumIzvucen;
     document.getElementById('imePreduzecaPosiljaoca').value = imePreduzecaPosiljaocaIzvuceno;
@@ -209,8 +233,15 @@ function izmeniFakturu(event) {
     document.getElementById('medjuvrednosti').value = medjuvrednostiIzvucena;
     document.getElementById('porezNaPromet').value = porezNaPrometIzvucen;
     document.getElementById('ukupnoDugovanje').value = ukupnoDugovanjeIzvuceno;
+
+    document.getElementById('kolicina1').value=kolicina1NIzvuceno;
+
     prikazSacuvanihFaktura();
 }
+
+
+
+
 
 
 
