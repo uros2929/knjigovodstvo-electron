@@ -12,21 +12,28 @@
 }
 
 #naslovAnalitikaRacuna{
-    width: 60%;
+    width: 100%;
     min-height: 50px;
     color: white;
     font-size: 30px;
     position: relative;
     left: 5%;
-    border-bottom: solid 3px rgb(255, 85, 0);
     border-right: solid 3px rgb(255, 85, 0);
-    border-top: solid 3px rgb(255, 85, 0);
+}
+#dugmeSacuvajAnalitiku,#dugmeStampajAnalitiku{
+    background-color: rgb(26,26,29);
+    border-color: rgb(63, 63, 66);
+    color: white;  
+    font-size: 24px;
+}
+#dugmeSacuvajAnalitiku:hover,#dugmeStampajAnalitiku:hover{
+    background-color: rgb(63, 63, 66);
+    border-color: rgb(255, 85, 0);
 }
 #mainAnalitikaRacuna{
-    display: flex;
-    flex-direction: column;
+    display: block;
     min-height: 597px;
-    width: 60%;
+    width: 100%;
     position: relative;
     left: 5%;
     border-right: solid 3px rgb(255, 85, 0);
@@ -41,4 +48,93 @@
 }
 #dugmeIzadjiIzAnalitikaRacuna:hover{
     border-color: rgb(255, 85, 0);
+}
+#formaAnalitikaRacuna{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 36px;
+    border-bottom: solid 3px rgb(255, 85, 0);
+}
+#formaAnalitikaRacuna input{
+position: relative;
+text-align: center;
+font-size: 18px;
+border: solid 1px rgb(255, 85, 0);
+margin-left: 2px;
+width: 25%;
+}
+#sacuvanaAnalitika{
+    width: 40%;
+    min-height: inherit;
+    border-right: solid 3px rgb(255, 85, 0); 
+}
+#prikazAnalitike{
+    width: 60%;
+    position: relative;
+    float: right;
+    font-size: 18px;
+    display: flex;
+    flex-flow: row wrap;
+}
+#listaSacuvaneAnalitike{
+    position: relative;
+    float: left;
+    min-height: inherit;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+#listaSacuvaneAnalitike li{
+    color: white;
+    width: 50%;
+    font-size: 28px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+#listaSacuvaneAnalitike em{
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-top: -9%;
+}
+#listaSacuvaneAnalitike em:hover{
+    color: red;
+}
+#listaSacuvaneAnalitike li:hover{
+    color: red;
+
+}
+#prikazanDatum,#prikazanaStranka,#prikazanaDugovanja,#prikazanaPotraznja{
+    width: 66%;
+    height: 40px;
+    color: white;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 24px;
+}
+#prikazanaDugovanja{
+    color: aqua;
+}
+#prikazanaPotraznja{
+    color: red;
+}
+#nazivPrikaza{
+    color: white;
+    font-size: 24px;
+    width: 30%;
+}
+#grafickiPrikaz{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 450px;
+}
+#graficikiDugovanje,#grafickiPotraznja{
+    width: 15%;
+    margin-left: 2%;
 }

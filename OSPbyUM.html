@@ -161,10 +161,38 @@
                     </div>
                 </div>
                 <div id="modalAnalitikaRacuna">
-                    <div id="naslovAnalitikaRacuna">Analitika računa
+                    <div id="naslovAnalitikaRacuna">
+                        <button id="dugmeSacuvajAnalitiku">Sačuvaj</button>
+                        <button id="dugmeStampajAnalitiku">Štampaj</button>
                         <button id="dugmeIzadjiIzAnalitikaRacuna">X</button>
                     </div>
-                    <div id="mainAnalitikaRacuna"></div>
+                    <div id="mainAnalitikaRacuna">
+                        <form action="?" method="POST" id="formaAnalitikaRacuna">
+                            <input type="date" name="datum" id="datumAnalitika">
+                            <br>
+                            <input type="text" name="stranka" id="stranka" placeholder="Naziv stranke">
+                            <br>
+                            <input type="number" name="duguje" id="duguje" placeholder="Duguje">
+                            <br>
+                            <input type="number" name="potrazuje" id="potrazuje" placeholder="Potražuje">
+                        </form>
+                        <div id="prikazAnalitike">
+                            <div id="nazivPrikaza">Datum:</div>
+                            <div id="prikazanDatum"></div>
+                            <div id="nazivPrikaza"> Stranka:</div>
+                            <div id="prikazanaStranka"> </div>
+                            <div id="nazivPrikaza"> Dugovanje:</div>
+                            <div id="prikazanaDugovanja"> </div>
+                            <div id="nazivPrikaza"> Potražnja:</div>
+                            <div id="prikazanaPotraznja"> </div>
+                            <div id="grafickiPrikaz">
+                                <div id="graficikiDugovanje"></div>
+                                <div id="grafickiPotraznja"></div>
+                            </div>
+                        </div>
+                        <div id="sacuvanaAnalitika"></div>
+                    </div>
+
                 </div>
                 <div id="modalDokumenta">
                     <div id="naslovDokumenta">
