@@ -1,0 +1,73 @@
+@media screen and (max-width: 1530px){
+    #citatiRandom{
+    margin-left: -10%;
+    } 
+ }
+ @media screen and (max-width: 1366px){
+    #citatiRandom{
+    margin-left: -8%;
+    } 
+ }
+ @media screen and (max-width: 1280px){
+    #citatiRandom{
+    margin-left: -6%;
+    width: 22%;
+    } 
+ }
+ @media screen and (max-width: 1024px){
+    #citatiRandom{
+    margin-left: -4%;
+    width: 22%;
+    } 
+ }
+ @media screen and (max-width: 800px){
+    #citatiRandom{
+    margin-left: -4%;
+    width: 21%;
+    } 
+ }
+@media screen and (max-width: 768px){
+   #citatiRandom{
+       width: 100%;
+       margin:0 auto;
+       position: relative;
+   } 
+}
+@media screen and (max-width: 425px){
+    #ugasiCitat{
+      margin-left: 32%;
+    } 
+    #emailLog,#passLog{
+        font-size: 18px;
+        width: 75%;
+        height: 36px; 
+    }
+    #emailLog:placeholder-shown,#passLog:placeholder-shown{
+        font-size: 18px;
+        width: 75%;
+        height: 36px;
+    }
+    #imeRegistracija,#prezimeRegistracija,#emailRegistracija,#firmaRegistracija,#passwordRegistracija,#potvrdiPasswordRegistracija,#sifraFirmeRegistarcija{
+        width: 75%;
+        height: 36px;
+        font-size: 18px;  
+    }
+    #imeRegistracija:placeholder-shown,#prezimeRegistracija:placeholder-shown,#emailRegistracija:placeholder-shown,#firmaRegistracija:placeholder-shown,#passwordRegistracija:placeholder-shown,#potvrdiPasswordRegistracija:placeholder-shown,#sifraFirmeRegistarcija:placeholder-shown{
+        width: 75%;
+        height: 36px;
+        font-size: 18px;
+    }
+    #odgovorEmail,#odgovor{
+        width: 75%;
+        height: 36px;
+        font-size: 18px;   
+    }
+    #odgovorEmail:placeholder-shown,#odgovor:placeholder-shown{
+        width: 75%;
+        height: 36px;
+        font-size: 18px; 
+    }
+    #pokaziSifru{
+        font-size: 18px;
+    }
+ }

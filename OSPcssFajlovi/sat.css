@@ -16,3 +16,31 @@ font-style: italic;
     margin-top: 4%;
     font-style: italic;  
 }
+@media screen and (max-width: 1360px){
+    #datumDiv{font-size: 28px;}
+        #sat{font-size: 28px; }
+}
+@media screen and (max-width: 1024px){
+#datumDiv{
+    font-size: 26px;
+    margin-left: -9%;
+    margin-bottom: 3%;
+    margin-top: 6%;
+}
+#sat{ 
+    font-size: 26px;
+    margin-left: 0%;
+}
+}
+@media screen and (max-width: 800px){
+    #datumDiv{
+        font-size: 21px;
+        margin-left: -10%;
+        margin-bottom: 3%;
+        margin-top: 6%;
+    }
+    #sat{ 
+        font-size: 21px;
+        margin-left: 0%;
+    }   
+}

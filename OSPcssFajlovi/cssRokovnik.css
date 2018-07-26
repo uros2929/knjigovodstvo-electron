@@ -126,3 +126,21 @@ color:red;
 #stampanjeRokovnika{
 left: 36%;
 }
+@media screen and (max-width: 1360px){
+    #stampanjeRokovnika{
+        left: 34%;
+        }
+ }
+@media screen and (max-width: 1024px){
+    #stampanjeRokovnika{
+        left: 32%;
+        }
+ }
+ @media screen and (max-width: 800px){
+    #stampanjeRokovnika{
+        left: 28%;
+        }
+        #lista>li>em {
+            width: 12%;
+        }
+ }

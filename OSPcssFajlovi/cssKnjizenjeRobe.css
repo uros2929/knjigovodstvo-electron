@@ -147,3 +147,8 @@ background-color: rgb(26,26,29);
 #prikazProizvodaIzLocala h2{
 display: inline;
 }
+@media screen and (max-width: 800px){
+    #knjizenjeRobeForma label {
+        font-size: 20px;
+    }
+}

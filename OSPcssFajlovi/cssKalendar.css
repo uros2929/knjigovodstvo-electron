@@ -2,7 +2,6 @@
     position: relative;
     float: right;
     top: 0;
-    right: 5%;
     text-align: center;
     align-content: center;
     display: none;
@@ -15,12 +14,12 @@
 #naslovKalendar{
     width: 100%;
     color: white;
-    font-size: 21px;
+    font-size: 24px;
     height: 20%;
     display: flex;
     flex-flow: row wrap;
     position: relative;
-    left: 5%;
+    margin-left: 4%;
 }
 #naslovKalendar>div{
   margin: 1% 2% 1% 1%;        
@@ -59,7 +58,6 @@
     width: 25%;
     border-left: solid gainsboro 1px;
     padding: 3%;
-
 }
 .mesecUnutrasnji {
     width: 100%;
@@ -91,7 +89,7 @@
     background-color: rgb(58, 58, 58);
     border-color: red;
     -webkit-animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
-    animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+     animation: rotate-hor-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 }
 #textAreaKalendara{
     width: 100%;
@@ -130,3 +128,40 @@
     background-color: rgb(30, 34, 34);
     border-color: rgb(255, 85, 0);
 }
+
+@media screen and (max-width: 1600px){
+    #naslovKalendar{
+        font-size: 23px;
+        margin-left: 0;
+    } 
+ }
+ 
+@media screen and (max-width: 1440px){
+    #naslovKalendar{
+        font-size: 21px;
+        margin-left: 0;
+    } 
+ }
+ @media screen and (max-width: 1360px){
+    #naslovKalendar{
+        font-size: 18px;
+    }   
+ }
+ @media screen and (max-width: 1024px){
+    #naslovKalendar{
+        font-size: 17px;
+    }   
+ }
+ @media screen and (max-width: 800px){
+    #naslovKalendar>div {
+        margin-left: 7%;
+    } 
+    .mesecUnutrasnji {
+        font-size: 21px;
+    }
+    #textAreaKalendara textarea {
+        font-size: 21px;
+    }
+ }
+  
+

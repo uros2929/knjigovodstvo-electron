@@ -43,6 +43,10 @@
 #dugmeIzadjiIzGlavnaKnjiga:hover{
     border-color: rgb(255, 85, 0);
 }
+@media screen and (max-width: 800px){
+    #naslovGlavnaKnjiga{width: 100%}
+    #mainGlavnaKnjiga {width: 100%}  
+}
 
 
 

@@ -56,3 +56,7 @@
     color:rgb(72, 181, 140);
     text-decoration-line: none;
 }
+@media screen and (max-width: 800px){
+    #naslovDokumenta{width: 100%}
+    #mainDokumenta {width: 100%}  
+}

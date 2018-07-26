@@ -72,3 +72,7 @@
     position: relative;
     top: 15%;
 }
+@media screen and (max-width: 800px){
+    #naslovDigitron{width: 100%}
+    #mainDigitron {width: 100%}  
+}
