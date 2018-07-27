@@ -76,3 +76,17 @@
     #naslovDigitron{width: 100%}
     #mainDigitron {width: 100%}  
 }
+@media screen and (max-width: 425px){
+    #naslovDigitron {
+        min-height: 83px;   
+    }
+    #prikazIskucanihBrojeva {
+        font-size: 40px;
+        top: 0px;
+    }
+    #digitronDugmici>button {
+        width: 60px;
+        height: 60px;
+        margin-top: 5%;
+    }
+}

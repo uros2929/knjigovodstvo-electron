@@ -163,5 +163,20 @@
         font-size: 21px;
     }
  }
+ @media screen and (max-width: 425px){
+    #mainKalendar{
+       left: 6%;
+       width: 94%; 
+    }
+    #textAreaKalendara button {
+        top: 109%;
+        width: 18%;
+        height: 30px;
+        font-size: 20px;
+    }
+    #textAreaKalendara textarea {
+        border-bottom:solid 2px red;
+    }
+}
   
 

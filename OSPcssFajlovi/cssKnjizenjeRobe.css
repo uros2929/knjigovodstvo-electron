@@ -152,3 +152,19 @@ display: inline;
         font-size: 20px;
     }
 }
+@media screen and (max-width: 425px){
+    #formaKnjizenje{
+        width: 50%;
+    }
+    #prikazIzFormeKnjizenje li{
+        min-height: 115px;
+    }
+    #dugmeDodajProizvod{
+        font-size: 20px;
+        width: 45%;
+    }
+    #prikazIzFormeKnjizenje li em{
+        margin-right: 1%; 
+        width: 50%;
+    }
+}

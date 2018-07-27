@@ -102,5 +102,22 @@ border: none;
     #naslovNabavka{width: 100%}
     #mainNabavka {width: 100%}  
 }
-
+@media screen and (max-width: 425px){
+    #naslovNabavka {
+        font-size: 10px;
+    }
+    #emailDobavljaca {
+        height: 30px;
+        font-size: 20px;
+    }
+    #dodajDobavljaca {
+        font-size: 20px;
+    }
+    .nalogZaNabavku li a,#prikazDobavljaca li{
+        font-size: 26px;
+    }
+    #prikazDobavljaca li button {
+        font-size: 16px;
+    }
+}
 

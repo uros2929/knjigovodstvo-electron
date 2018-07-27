@@ -88,3 +88,44 @@
     }
   
  }
+ @media screen and (max-width: 425px){
+    header{
+        width: 94%;
+        margin-left: 0%;
+    }
+    aside{
+        width: 94%;
+        justify-content: center;
+        margin-left: 0%;
+    }
+    aside>button{
+        height: 30px;
+        width: 90%; 
+        font-size: 20px;
+    }
+    main{
+        width: 94%;
+        margin-left: 0%;
+    }
+    #logoutDugme {
+        right: 10%;
+    }
+    #PodatciUlogovanogKorisnika{
+        font-size: 18px;
+        margin-right: 26%;
+        margin-top: -2%;
+    }
+    #PodatciUlogovanogKorisnikaImeiPrezime{
+        font-size: 18px;
+        margin-top: -27%;
+        margin-right: 3%;
+    }
+    .naslov h1{
+        font-size: 30px;
+        top: 50px;
+    }
+    #citatiRandom{
+        top: 106%;
+        font-size: 24px;
+    }
+ }

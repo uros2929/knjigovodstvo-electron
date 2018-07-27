@@ -44,3 +44,14 @@ font-style: italic;
         margin-left: 0%;
     }   
 }
+@media screen and (max-width: 425px){
+    #sat{
+        font-size: 18px;
+        margin-left: 4%;
+     }
+    #datumDiv{
+        font-size: 18px;
+        margin-left: -16%;
+        margin-top: 8%;
+    }
+}

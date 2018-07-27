@@ -144,3 +144,27 @@ left: 36%;
             width: 12%;
         }
  }
+ @media screen and (max-width: 425px){
+    #upisObaveza {
+            width: 50%;
+            font-size: 18px;
+        }
+    #dugmePostaviStavku {
+            font-size: 18px;
+            width: 14%;
+     }
+     #lista>li {
+         font-size: 18px;
+         height: 55px;
+     }
+     #lista>li>em {
+         width: 45%;
+     }
+     #footerRokovnik>a {
+         font-size: 18px;
+     }
+     #stampanjeRokovnika{
+        left: 5%;
+        }
+    }
+    
