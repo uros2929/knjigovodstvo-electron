@@ -178,5 +178,10 @@
         border-bottom:solid 2px red;
     }
 }
+@media screen and (max-width: 375px){
+    #textAreaKalendara button{
+        top: 114%;
+    } 
+ }
   
 

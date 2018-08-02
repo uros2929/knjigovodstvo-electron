@@ -117,15 +117,39 @@
     }
     #PodatciUlogovanogKorisnikaImeiPrezime{
         font-size: 18px;
-        margin-top: -27%;
+        margin-top: -35%;
         margin-right: 3%;
     }
     .naslov h1{
         font-size: 30px;
-        top: 50px;
+        top: 0px;
     }
     #citatiRandom{
         top: 106%;
         font-size: 24px;
+    }
+ }
+ @media screen and (max-width: 375px){
+    header{
+      min-height: 300px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .naslov h1{
+        top: -50px;
+        margin-left: 10%;
+    }
+    #PodatciUlogovanogKorisnika{
+        font-size: 18px;
+        margin-right: 50%;
+        top: -120px;
+    }
+    #PodatciUlogovanogKorisnikaImeiPrezime{
+      top: 275px;
+      right: 15%;
+    }
+    #logoutDugme {
+        top: 310px;
+        right: -26%;
     }
  }

@@ -168,3 +168,13 @@ display: inline;
         width: 50%;
     }
 }
+@media screen and (max-width: 375px){
+    #knjizenjeRobeForma label{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 320px){
+    #knjizenjeRobeForma label{
+        font-size: 15px;
+    }
+}

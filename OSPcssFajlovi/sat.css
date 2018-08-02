@@ -52,6 +52,16 @@ font-style: italic;
     #datumDiv{
         font-size: 18px;
         margin-left: -16%;
-        margin-top: 8%;
+        margin-top: 3%;
+    }
+}
+@media screen and (max-width: 375px){
+    #datumDiv{
+        margin-left: 34%;
+        top: -140px;
+    } 
+    #sat{
+        margin-left: 43%;
+        top: -150px;
     }
 }
