@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
     background-color: rgb(26, 26, 29);
 }
-#dugmeDodajRed,#resetujFakturu,#stampajFakturu,#sacuvajFakturu,#izbrisiRed{
+#dugmeDodajRed,#resetujFakturu,#stampajFakturu,#sacuvajFakturu{
     background-color: rgb(30,34,34);
     color: white;
     height: 45px;
@@ -10,14 +10,9 @@ body{
     margin-left: 2%;        
     margin-bottom: 3%;
 }
-#dugmeDodajRed:hover,#resetujFakturu:hover,#stampajFakturu:hover,#sacuvajFakturu:hover,#izbrisiRed:hover{
+#dugmeDodajRed:hover,#resetujFakturu:hover,#stampajFakturu:hover,#sacuvajFakturu:hover{
     background-color: rgb(63,63,66);
     border-color: rgb(255, 85, 0);
-}
-#brojReda{
-    height: 30px;
-    width: 18%; 
-    font-size: 16px; 
 }
 #sacuvaneFakture{
     border: solid 2px white; 
