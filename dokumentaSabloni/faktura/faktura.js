@@ -84,7 +84,7 @@ dugmeResetujFakturu.addEventListener("click", (event) => {
 });
 dugmeStampajFakturu.addEventListener("click", (event) => {
     event.preventDefault();
-    alert("Stampanje!");
+    print();
 });
 let fakture = {};
 

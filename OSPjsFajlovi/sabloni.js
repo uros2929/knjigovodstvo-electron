@@ -45,4 +45,11 @@ function skloniModalMain(dugme, modal) {
         }
     })
 }
+function stampanje(IDdivZaStampanje) {
+    let celaStranica=document.body.innerHTML;
+    let stavkeZaStampanje=document.getElementById(IDdivZaStampanje);
+    document.body.innerHTML=stavkeZaStampanje.innerHTML;
+    print();
+    document.body.innerHTML=celaStranica;
+}
 

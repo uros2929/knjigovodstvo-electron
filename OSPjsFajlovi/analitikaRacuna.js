@@ -144,10 +144,3 @@ function izbrisiAnalitiku(event) {
     }
 
 }
-function stampajAnalitiku() {
-    dugmeStampajAnalitiku.addEventListener('click', (event) => {
-        event.preventDefault();
-        alert('Stampanje !')
-    })
-}
-stampajAnalitiku();
