@@ -22,6 +22,7 @@ function getVal(vrednostID) {
 }
 function cuvanjeBrojevaIzTabele(a) {
     let x = document.querySelectorAll(a);
+     //console.log(x[0].value);
      for (let i = 0; i < x.length; i++) {
       console.log(x[i].value)
     
