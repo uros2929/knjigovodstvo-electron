@@ -10,26 +10,32 @@ let fakturaPodatci = document.getElementById('fakturaPodatci'),
     formaPrimaoca = document.getElementById('formaPrimaoca'),
     ukupneVrednosti = document.getElementById('ukupneVrednosti');
 
-function $(vrednostID){
+function $(vrednostID) {
     return document.getElementById(vrednostID);
 }
 
-function setVal(vrednostID,vrednostIDJednako){
-    document.getElementById(vrednostID).value=vrednostIDJednako;
+function setVal(vrednostID, vrednostIDJednako) {
+    document.getElementById(vrednostID).value = vrednostIDJednako;
 }
-function getVal(vrednostID){
+function getVal(vrednostID) {
     return document.getElementById(vrednostID).value;
 }
-
+function cuvanjeBrojevaIzTabele(a) {
+    let x = document.querySelectorAll(a);
+     for (let i = 0; i < x.length; i++) {
+      console.log(x[i].value)
+    
+     }  
+}
 function headerTabele() {
     let header = tabelaBody.createTBody();
-    header.setAttribute('id','tBody');
+    header.setAttribute('id', 'tBody');
     let values = [
-        {class: 'tabelaBR', html: ''},
-        {class: 'tabelaKolicinaH', html: 'KOLICINA'},
-        {class: 'tabelaOpisH', html: 'OPIS'},
-        {class: 'tabelaCenaH', html: 'CENA PO JEDINICI'},
-        {class: 'tabelaCenaH', html: 'UKUPNO'},
+        { class: 'tabelaBR', html: '' },
+        { class: 'tabelaKolicinaH', html: 'KOLICINA' },
+        { class: 'tabelaOpisH', html: 'OPIS' },
+        { class: 'tabelaCenaH', html: 'CENA PO JEDINICI' },
+        { class: 'tabelaCenaH', html: 'UKUPNO' },
     ];
     let redH = header.insertRow(0);
     for (let val in values) {
@@ -46,29 +52,29 @@ function pravljenjeRedovaTabele() {
     dugmeDodajRed.addEventListener('click', (event) => {
         event.preventDefault();
         let red = tabelaBody.insertRow();
-        red.setAttribute('id',`red${broj}`);
+        red.setAttribute('id', `red${broj}`);
         let celija1 = red.insertCell(0);
         celija1.innerHTML = `<div id='delred${broj}'>del</div>`;
         celija1.classList.add('broj');
-        celija1.setAttribute('onclick',' izbrisiRed(event)');
+        celija1.setAttribute('onclick', ' izbrisiRed(event)');
         broj++;
         let celija2 = red.insertCell(1);
-        celija2.innerHTML = `<input type='number' placeholder='Količina' id='kolicina${broj}'>`;
+        celija2.innerHTML = `<input type='number' class='kolicinaInput' placeholder='Količina' id='kolicina${broj}'>`;
         celija2.classList.add('tabelaKolicina');
         let celija3 = red.insertCell(2);
         celija3.innerHTML = `<input type='text' class='opisInput' placeholder='Unesite opis' id='opis${broj}'>`;
         celija3.classList.add('tabelaOpis');
         let celija4 = red.insertCell(3);
-        celija4.innerHTML = `<input type='text' placeholder='Unesite cenu' id='cena${broj}'>`;
+        celija4.innerHTML = `<input type='text' class='cenaInput' placeholder='Unesite cenu' id='cena${broj}'>`;
         celija4.classList.add('tabelaCena');
         let celija5 = red.insertCell(4);
-        celija5.innerHTML = `<input type='text' placeholder='Unesite ukupan iznos' id='ukupanIznos${broj}'>`;
+        celija5.innerHTML = `<input type='text' class='ukupanIznosInput' placeholder='Unesite ukupan iznos' id='ukupanIznos${broj}'>`;
         celija5.classList.add('tabelaCena');
-       /* if (broj === 22) {
-            alert("Uneli ste maksimalan broj artikala!");
-            dugmeDodajRed.disabled = true;
-            dugmeDodajRed.style = "background-color: rgb(63,63,66);border-color: rgb(255, 85, 0);"
-        }*/
+        /* if (broj === 22) {
+             alert("Uneli ste maksimalan broj artikala!");
+             dugmeDodajRed.disabled = true;
+             dugmeDodajRed.style = "background-color: rgb(63,63,66);border-color: rgb(255, 85, 0);"
+         }*/
     })
 }
 
@@ -84,7 +90,7 @@ dugmeResetujFakturu.addEventListener("click", (event) => {
 });
 dugmeStampajFakturu.addEventListener("click", (event) => {
     event.preventDefault();
-    print();
+    print(); 
 });
 let fakture = {};
 
@@ -127,7 +133,9 @@ function sacuvajFakturu() {
             medjuvrednostiN: getVal('medjuvrednosti'),
             porezNaPrometN: getVal('porezNaPromet'),
             ukupnoDugovanjeN: getVal('ukupnoDugovanje'),
-            kolicina1N: getVal('kolicina2')
+          
+
+
         };
         localStorage.setItem("fakture", JSON.stringify(fakture));
         alert('Uspešno sačuvana faktura !');
@@ -136,6 +144,10 @@ function sacuvajFakturu() {
         formaPosiljaoca.reset();
         formaPrimaoca.reset();
         ukupneVrednosti.reset();
+        cuvanjeBrojevaIzTabele('.kolicinaInput');
+        cuvanjeBrojevaIzTabele('.opisInput');
+        cuvanjeBrojevaIzTabele('.cenaInput');
+        cuvanjeBrojevaIzTabele('.ukupanIznosInput');
     });
 }
 
@@ -181,8 +193,9 @@ function izmeniFakturu(event) {
     for (let broj = 1; broj < 22; broj++) {
         let red = tabelaBody.insertRow(broj);
         let celija1 = red.insertCell(0);
-        celija1.innerHTML = `${broj}`;
+        celija1.innerHTML = `<div id='delred${broj}'>del</div>`;
         celija1.classList.add('broj');
+        celija1.setAttribute('onclick', ' izbrisiRed(event)');
         let celija2 = red.insertCell(1);
         celija2.innerHTML = `<input type='number' placeholder='Količina' id='kolicina${broj}'>`;
         celija2.classList.add('tabelaKolicina');
@@ -196,29 +209,31 @@ function izmeniFakturu(event) {
         celija5.innerHTML = `<input type='text' placeholder='Unesite ukupan iznos' id='ukupanIznos${broj}'>`;
         celija5.classList.add('tabelaCena');
     }
-    setVal('fakturaBroj',izvuceneFakture.fakturaBrojN);
-    setVal('datum',izvuceneFakture.datumN);
-    setVal('imePreduzecaPosiljaoca',izvuceneFakture.imePreduzecaPosiljaocaN);
-    setVal('adresaPreduzeca',izvuceneFakture.adresaPreduzecaN);
-    setVal('telefon',izvuceneFakture.telefonN);
-    setVal('imePrimaoca',izvuceneFakture.imePrimaocaN);
-    setVal('imePreduzecaPrimaoca',izvuceneFakture.imePreduzecaPrimaocaN);
-    setVal('ulicaIBroj',izvuceneFakture.ulicaIBrojN);
-    setVal('gradDrzavaPPB',izvuceneFakture.gradDrzavaPPBN);
-    setVal('telefonPrimaoca',izvuceneFakture.telefonPrimaocaN);
-    setVal('medjuvrednosti',izvuceneFakture.medjuvrednostiN);
-    setVal('porezNaPromet',izvuceneFakture.porezNaPrometN);
-    setVal('ukupnoDugovanje',izvuceneFakture.ukupnoDugovanjeN);
-    setVal('kolicina1',izvuceneFakture.kolicina1N);
+    setVal('fakturaBroj', izvuceneFakture.fakturaBrojN);
+    setVal('datum', izvuceneFakture.datumN);
+    setVal('imePreduzecaPosiljaoca', izvuceneFakture.imePreduzecaPosiljaocaN);
+    setVal('adresaPreduzeca', izvuceneFakture.adresaPreduzecaN);
+    setVal('telefon', izvuceneFakture.telefonN);
+    setVal('imePrimaoca', izvuceneFakture.imePrimaocaN);
+    setVal('imePreduzecaPrimaoca', izvuceneFakture.imePreduzecaPrimaocaN);
+    setVal('ulicaIBroj', izvuceneFakture.ulicaIBrojN);
+    setVal('gradDrzavaPPB', izvuceneFakture.gradDrzavaPPBN);
+    setVal('telefonPrimaoca', izvuceneFakture.telefonPrimaocaN);
+    setVal('medjuvrednosti', izvuceneFakture.medjuvrednostiN);
+    setVal('porezNaPromet', izvuceneFakture.porezNaPrometN);
+    setVal('ukupnoDugovanje', izvuceneFakture.ukupnoDugovanjeN);
+    setVal('kolicina1', izvuceneFakture.kolicinaN)
 
     prikazSacuvanihFaktura();
 }
 
 function izbrisiRed(event) {
     event.preventDefault();
-    let provera=confirm('Da li ste sigurni ?')
-    let redZaBrisanje=document.getElementById(event.target.id.substring(3));
-    if (provera==true) {
-        redZaBrisanje.parentNode.removeChild(redZaBrisanje);   
+    let provera = confirm('Da li ste sigurni ?')
+    let redZaBrisanje = document.getElementById(event.target.id.substring(3));
+    if (provera == true) {
+        redZaBrisanje.parentNode.removeChild(redZaBrisanje);
     }
 }
+
+

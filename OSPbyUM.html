@@ -135,10 +135,72 @@
                     </div>
                 </div>
                 <div id="modalGlavnaKnjiga">
-                    <div id="naslovGlavnaKnjiga">Glavna knjiga
+                    <div id="naslovGlavnaKnjiga">
                         <button id="dugmeIzadjiIzGlavnaKnjiga">X</button>
+                        <div class="bilansStanja">BILANS STANJA PREDUZEĆA NA DAN: <input type="date" name="bsp" id="bsp"><br>
+                            <div class="aktiva">AKTIVA</div>
+                            <div class="pasiva">PASIVA</div>
+                        </div>
+
                     </div>
-                    <div id="mainGlavnaKnjiga"></div>
+
+                    <div id="mainGlavnaKnjiga">
+                        <div class="aktivaMain">
+                            <form action="?" method="POST" id="formaAktiva">
+                                <input type="text" name="textAktiva1" id="textAktiva1" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva1" id="brojAktiva1" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva2" id="textAktiva2" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva2" id="brojAktiva2" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva3" id="textAktiva3" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva3" id="brojAktiva3" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva4" id="textAktiva4" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva4" id="brojAktiva4" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva5" id="textAktiva5" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva5" id="brojAktiva5" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva6" id="textAktiva6" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva6" id="brojAktiva6" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva7" id="textAktiva7" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva7" id="brojAktiva7" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva8" id="textAktiva8" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva8" id="brojAktiva8" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva9" id="textAktiva9" placeholder="Upiši naziv"><input type="number"
+                                    name="brojAktiva9" id="brojAktiva9" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textAktiva10" id="textAktiva10" placeholder="Upiši naziv"><input
+                                    type="number" name="brojAktiva10" id="brojAktiva10" value="0" onchange='ispisAktiveIPasive()'><br>
+                            </form>
+                            <div id="rezultatAktivaTekst">Ukupna aktiva <span id="rezultatAktiva"></span></div>
+                        </div>
+
+                        <div class="pasivaMain">
+                            <form action="?" method="POST" id="formaPasiva">
+                                <input type="text" name="textPasiva1" id="textPasiva1" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva1" id="brojPasiva1" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva2" id="textPasiva2" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva2" id="brojPasiva2" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva3" id="textPasiva3" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva3" id="brojPasiva3" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva4" id="textPasiva4" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva4" id="brojPasiva4" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva5" id="textPasiva5" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva5" id="brojPasiva5" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva6" id="textPasiva6" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva6" id="brojPasiva6" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva7" id="textPasiva7" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva7" id="brojPasiva7" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva8" id="textPasiva8" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva8" id="brojPasiva8" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva9" id="textPasiva9" placeholder="Upiši naziv"><input type="number"
+                                    name="brojPasiva9" id="brojPasiva9" value="0" onchange='ispisAktiveIPasive()'><br>
+                                <input type="text" name="textPasiva10" id="textPasiva10" placeholder="Upiši naziv"><input
+                                    type="number" name="brojPasiva10" id="brojPasiva10" value="0" onchange='ispisAktiveIPasive()'><br>
+                            </form>
+                            <div id="rezultatPasivaTekst">Ukupna pasiva <span id="rezultatPasiva"></span></div>
+                        </div>
+
+                    </div>
+                    <div id="sacuvaniBS"></div>
+                    <button id="dugmeResetujGlavnuKnjigu" onclick="resetujGlavnuKnjigu()">Resetuj</button>
+                    <button id="sacuvajBS" onclick="sacuvajGlavnuKnjigu()">Sačuvaj</button>
                 </div>
                 <div id="modalNabavka">
                     <div id="naslovNabavka">
@@ -163,7 +225,7 @@
                 <div id="modalAnalitikaRacuna">
                     <div id="naslovAnalitikaRacuna">
                         <button id="dugmeSacuvajAnalitiku">Sačuvaj</button>
-                        <button id="dugmeStampajAnalitiku"  onclick="stampanje('prikazAnalitike')">Štampaj</button>
+                        <button id="dugmeStampajAnalitiku" onclick="stampanje('prikazAnalitike')">Štampaj</button>
                         <button id="dugmeIzadjiIzAnalitikaRacuna">X</button>
                     </div>
                     <div id="mainAnalitikaRacuna">
