@@ -53,7 +53,7 @@ function postaviPodatkeKorisnikaULocal() {
         };
         korisnici[email] = noviKorisnik;
         setToLocalStorage("Korisnici", korisnici);
-        alert("Uspesno ste se registrovali");
+        alert("Uspešno ste se registrovali!");
         hide(formaRegistrujSe);
         show(formaLogInSve);
     })
@@ -86,7 +86,7 @@ function zaboravljenaSifra() {
             divPrikazZaboravljenjeSifre = document.getElementById("prikazZaboravljeneSifre");
 
         if (korisnici[email].sifraFirmeKorisnika !== sifraFirmeOdgovor) {
-            alert("Uneli ste pogresnu sifru iz firme!")
+            alert("Uneli ste pogrešnu šifru iz firme!")
             location.reload();
 
         } else {
