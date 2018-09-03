@@ -45,12 +45,12 @@ function skloniModalMain(dugme, modal) {
         }
     })
 }
-function stampanje(IDdivZaStampanje) { 
-    let stavkeZaStampanje=document.getElementById(IDdivZaStampanje);
-    document.body.innerHTML=stavkeZaStampanje.innerHTML;
+function stampanje(IDdivZaStampanje) {
+    let stavkeZaStampanje = document.getElementById(IDdivZaStampanje);
+    document.body.innerHTML = stavkeZaStampanje.innerHTML;
     print();
     location.reload();
-    
+
 }
 function setVal(vrednostID, vrednostIDJednako) {
     document.getElementById(vrednostID).value = vrednostIDJednako;
@@ -61,10 +61,10 @@ function getVal(vrednostID) {
 
 function setValGlavnaKnjiga(...input) {
     for (let idBroj of input) {
-        document.getElementById('brojAktiva'+idBroj).value="0";
-        document.getElementById('brojPasiva'+idBroj).value="0";
-        document.getElementById('textPasiva'+idBroj).value="";
-        document.getElementById('textAktiva'+idBroj).value="";
+        document.getElementById('brojAktiva' + idBroj).value = "0";
+        document.getElementById('brojPasiva' + idBroj).value = "0";
+        document.getElementById('textPasiva' + idBroj).value = "";
+        document.getElementById('textAktiva' + idBroj).value = "";
     }
 }
 

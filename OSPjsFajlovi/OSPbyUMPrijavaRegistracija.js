@@ -39,7 +39,7 @@ function postaviPodatkeKorisnikaULocal() {
             alert("Potvrda šifre nije ispravna")
             return;
         }
-        if (korisnici[email]!==undefined) {
+        if (korisnici[email] !== undefined) {
             alert('Korisnik sa datom email adresom već postoji ! ');
             return;
         }

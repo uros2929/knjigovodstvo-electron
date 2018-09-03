@@ -235,7 +235,7 @@ function stampanjeGlavneKnjige(event) {
     prikaziBS(event);
     print();
     location.reload();
-   
+
 }
 
 

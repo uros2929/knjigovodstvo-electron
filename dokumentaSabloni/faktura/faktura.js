@@ -88,10 +88,10 @@ dugmeResetujFakturu.addEventListener("click", (event) => {
 });
 dugmeStampajFakturu.addEventListener("click", (event) => {
     event.preventDefault();
-    dugmeDodajRed.style="display:none";
-    dugmeResetujFakturu.style="display:none";
-    dugmeStampajFakturu.style="display:none";
-    dugmeSacuvajFakturu.style="display:none";
+    dugmeDodajRed.style = "display:none";
+    dugmeResetujFakturu.style = "display:none";
+    dugmeStampajFakturu.style = "display:none";
+    dugmeSacuvajFakturu.style = "display:none";
     print();
     location.reload();
 });
