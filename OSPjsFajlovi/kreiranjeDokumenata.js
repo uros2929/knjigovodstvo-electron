@@ -19,6 +19,14 @@ function cuvanjeDokumenta() {
         let nazivDokumenta = document.getElementById('nazivDokumenta').value;
         let nazivDokumentaSacuvanog = `kreiranaDokumenta/${nazivDokumenta}.txt`;
         let proveraNazivaDokumenta = sistemDokumenata.existsSync(`kreiranaDokumenta/${nazivDokumenta}.txt`);
+        if (tekstKreiranogDokumenta == "") {
+            alert('Upišite tekst novog dokumenta !');
+            return ;
+         }
+         if (nazivDokumenta == "") {
+             alert('Upišite naziv dokumenta !');
+             return;
+         }
         if (proveraNazivaDokumenta === true) {
             let potvrda = confirm('Upisali ste postojeće ime dokumenta ! Ako želite da zamenite stari tekst dokumenta sa trenutnim tekstom,potvrdite');
             if (potvrda == true) {
@@ -32,12 +40,7 @@ function cuvanjeDokumenta() {
             if (error) {
                 return console.log(error);
             }
-            if (tekstKreiranogDokumenta == "") {
-                return alert('Upišite tekst novog dokumenta !');
-            }
-            if (nazivDokumenta == "") {
-                return alert('Upišite naziv dokumenta !')
-            }
+         
             alert("Dokument uspešno sačuvan !");
         });
 
