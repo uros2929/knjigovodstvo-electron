@@ -9,6 +9,6 @@
   "author": "Uros Marinkovic",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.3"
+    "electron": "^2.0.8"
   }
 }
