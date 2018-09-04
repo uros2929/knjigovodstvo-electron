@@ -32,7 +32,7 @@ POMOĆ ZA KORIŠĆENJE:
 
 1. Pokretanje programa:
    - Desni klik na folder ' Git Bash here '
-   - npm install electron
+   - npm install electron (Ukoliko electron nikada nije instaliran na racunaru)
    - npm start
 
 2. Za program je potrebna registracija korisnika !
